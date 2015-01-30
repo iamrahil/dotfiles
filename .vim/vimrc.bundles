@@ -1,0 +1,40 @@
+if &compatible
+	set nocompatible
+end
+
+filetype off
+
+call plug#begin('~/.vim/plugged')
+
+"Syntax and autocomplete
+Plug 'wting/rust.vim', {'for': 'rust'}
+Plug 'scrooloose/syntastic'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
+Plug 'tpope/vim-surround'
+
+
+"Navigation
+Plug 'kien/ctrlp.vim'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'justinmk/vim-sneak'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'Yggdroot/indentLine'
+
+"Accessories
+Plug 'bling/vim-airline'
+Plug 'majutsushi/tagbar'
+Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
+Plug 'vim-scripts/AutoComplPop'
+
+"VCS
+Plug 'tpope/vim-fugitive'
+Plug 'mhinz/vim-signify'
+
+"Color Schemes
+Plug 'chriskempson/base16-vim'
+
+call plug#end()
