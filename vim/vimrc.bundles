@@ -15,6 +15,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-surround'
+Plug 'editorconfig/editorconfig-vim'
 
 
 "Navigation
