@@ -3,7 +3,7 @@ source ~/.antigen/antigen.zsh
 antigen use oh-my-zsh
 antigen bundle zsh-users/zsh-syntax-highlighting
 
-antigen bundle <<EOBUNDLES
+antigen bundles <<EOBUNDLES
 	git
 	wd
 	per-directory-history
