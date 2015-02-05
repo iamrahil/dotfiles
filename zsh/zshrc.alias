@@ -1,0 +1,4 @@
+alias kick="sudo systemctl"
+alias throw="wget -O - "
+alias yt="youtube-dl --no-mtime"
+alias esudo="sudo -E "
