@@ -30,7 +30,6 @@ set completeopt=longest,menuone
 " Make enter finish the completion popup menu
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 nnoremap gp `[v`] 
-nmap <C-?> gcc 
 set backspace=indent,eol,start
 colorscheme desert256
 
