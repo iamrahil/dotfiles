@@ -18,3 +18,6 @@ vim +PlugInstall +qall
 
 # Set zsh as default shell
 chsh -s /bin/zsh
+
+# Init zsh and antigen plugins
+zsh
