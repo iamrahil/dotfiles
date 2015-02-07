@@ -15,3 +15,6 @@ ln -s $PWD/zsh/zshrc.alias $HOME/.zshrc.alias #TODO: Remove this;
 
 # Init vim
 vim +PlugInstall +qall
+
+# Set zsh as default shell
+chsh -s /bin/zsh
