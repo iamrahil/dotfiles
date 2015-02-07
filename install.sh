@@ -4,7 +4,7 @@ echo "Dependencies: vim, zsh"
 #TODO: Use readline/dirname to get directory of script
 
 # Setup vim
-ln -s $PWD/vim/vim $HOME/.vim
+ln -s $PWD/vim $HOME/.vim
 ln -s $HOME/.vim/vimrc $HOME/.vimrc
 ln -s $HOME/.vim/gvimrc $HOME/.gvimrc
 
