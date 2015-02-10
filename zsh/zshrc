@@ -13,6 +13,8 @@ antigen bundles <<EOBUNDLES
 	command-not-found
 EOBUNDLES
 
+antigen bundle kennethreitz/autoenv
+
 antigen theme ys
 
 antigen apply
