@@ -27,6 +27,10 @@ set ofu=syntaxcomplete#Complete
 " Make vim popup behave more like an IDE POPUP
 set completeopt=longest,menuone
 
+" Set default split positions
+set splitright
+set splitbelow
+
 " Make enter finish the completion popup menu
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 nnoremap gp `[v`] 
