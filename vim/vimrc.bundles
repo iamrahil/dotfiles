@@ -23,7 +23,6 @@ Plug 'tpope/vim-rails'
 Plug 'kien/ctrlp.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'justinmk/vim-sneak'
-Plug 'Lokaltog/vim-easymotion'
 Plug 'Yggdroot/indentLine'
 
 "Accessories
