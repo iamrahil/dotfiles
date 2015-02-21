@@ -16,7 +16,8 @@ Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-surround'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'tpope/vim-rails'
+Plug 'tpope/vim-rails', {'for': 'ruby'}
+Plug 'burnettk/vim-angular', { 'for': ['javascript','html']}
 
 
 "Navigation
