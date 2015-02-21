@@ -104,6 +104,9 @@ if exists("g:ctrl_user_command")
 endif
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/*,*/\.git/*
 
+"signify: updte git markers when vim gains focus
+let g:signify_update_on_focusgained = 0
+
 "Tagbar config for Go
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
