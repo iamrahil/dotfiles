@@ -51,7 +51,7 @@ let g:tex_flavor = "latex"
 set laststatus=2
 
 if &t_Co == 256
-    colorscheme Tomorrow-Night-Eighties
+    colorscheme Tomorrow-Night-Bright
 endif
 
 "Display whitespace characters
