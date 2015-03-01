@@ -102,7 +102,7 @@ imap <silent> <Home> <C-O><Home>
 if exists("g:ctrl_user_command")
   unlet g:ctrlp_user_command
 endif
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/*,*/\.git/*
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/*,*/\.git/*,*/bower_components/*,*/node_modules/*,*/dist/*
 
 "signify: updte git markers when vim gains focus
 let g:signify_update_on_focusgained = 0
