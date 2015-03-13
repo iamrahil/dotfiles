@@ -74,6 +74,9 @@ nmap <C-PageDown> :bprev<CR>
 "Toggle Highlights
 map <leader>q :noh<CR>
 
+"Map CtrlPTag
+map <C-y> :CtrlPTag<CR>
+
 "Functions
 function Opaq()
 	set t_Co=256
