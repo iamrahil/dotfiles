@@ -11,6 +11,7 @@ antigen bundles <<EOBUNDLES
 	tmux
 	git-extras
 	command-not-found
+	rails
 EOBUNDLES
 
 antigen bundle kennethreitz/autoenv
