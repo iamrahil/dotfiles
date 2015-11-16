@@ -12,6 +12,7 @@ antigen bundles <<EOBUNDLES
 	git-extras
 	command-not-found
 	rails
+	fancy-ctrl-z
 EOBUNDLES
 
 antigen bundle kennethreitz/autoenv
