@@ -19,7 +19,6 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-rails', {'for': 'ruby'}
 Plug 'burnettk/vim-angular', { 'for': ['javascript','html']}
 Plug 'mattn/emmet-vim', {'for': 'html'}
-Plug 'pangloss/vim-javascript', {'for': ['javascript','html']}
 
 "Navigation
 Plug 'kien/ctrlp.vim'
