@@ -90,6 +90,11 @@ function Transp()
 	set t_Co=128
 endfunction
 
+" NeoVim specific stuff
+if has('nvim')
+	let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
+
 "Smart Home (VimTip315)
 function! SmartHome()
   let first_nonblank = match(getline('.'), '\S') + 1
