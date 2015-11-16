@@ -162,4 +162,11 @@ if has('cscope')
   cnoreabbrev csh cs help
 
   command -nargs=0 Cscope cs add $VIMSRC/src/cscope.out $VIMSRC/src
+
+  if filereadable("cscope.out")
+    set nocsverb "Suppress the db connection message
+    cs add cscope.out
+    set csverb
+  endif
 endif
+
