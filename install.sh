@@ -5,7 +5,7 @@ echo "Dependencies: vim, zsh"
 
 # Setup vim
 ln -s $PWD/vim $HOME/.vim
-ln -s $HOME/.vim/vimrc $HOME/.vimrc
+ln -s $HOME/.vim/init.vim $HOME/.vimrc
 ln -s $HOME/.vim/gvimrc $HOME/.gvimrc
 
 # Setup zsh
