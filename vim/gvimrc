@@ -1,4 +1,4 @@
-set guifont=Inconsolata\ Medium\ 11
+set guifont=Oxygen\ Mono\ 9
 set guioptions-=L
 set guioptions-=r
 set guioptions-=T
