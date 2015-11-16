@@ -19,6 +19,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-rails', {'for': 'ruby'}
 Plug 'burnettk/vim-angular', { 'for': ['javascript','html']}
 Plug 'mattn/emmet-vim', {'for': 'html'}
+Plug 'cohama/lexima.vim'
 
 "Navigation
 Plug 'kien/ctrlp.vim'
