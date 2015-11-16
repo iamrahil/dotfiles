@@ -11,6 +11,7 @@ set incsearch
 set magic
 set smarttab
 set autoindent
+set autoread
 set tabstop=4
 set shiftwidth=4
 map <Esc>[B <Down>]
