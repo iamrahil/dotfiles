@@ -1,9 +1,11 @@
 # VIM config
 The vim config is made for working both in vim and neovim.
+
 Although neovim is targetted for primary support.
 
 ##Shortcuts
 Although reading through init.vim might be enough, some are listed for completeness
+
 Leader is \
 
 ###General
@@ -13,18 +15,20 @@ Leader is \
 * Control-Up/Down: Move lines/block up/down
 * Leader-q: disable highlights
 * Control-ww: Move between windows
-* Control-w<Arrow/hjkl>: Move between windows directionally
+* Control-w[Arrow/hjkl]: Move between windows directionally
 
 ###Motion
-* Leader-Leader-s<b>: Search for character <b> in both directions
-* Leader-Leader-f<b>: Search for character <b> forwards
+* Leader-Leader-s[b]: Search for character [b] in both directions
+* Leader-Leader-f[b]: Search for character [b] forwards
 * Leader-Leader-w: Start general forward find
 * Leader-Leader-b: Start general backward find
 
 
 ###Buffers/Tabs
 * Leader-b: List all buffers
+
 > Control-v/s/t to open in verticalsplit/horizontalsplit/tab
+
 * Control-e: Toggle last used buffer
 * Control-PgUp/Dn: Switch between buffers
 * Control-Alt-PgUp/Dn: Switch between tabs
@@ -36,9 +40,11 @@ Leader is \
 
 ###Surround
 b1,b2: surrounding types. eg. ' " [] () {}
-* cs<b1><b2>: replace b1 with b2 on selected block. eg. 'asv' -> "asv".
+* cs[b1][b2]: replace b1 with b2 on selected block. eg. 'asv' -> "asv".
+
 > cs[( adds space after replacing while cs[) does not, prefer the latter
-* ys[text-object]<b1>: wrap the verb block with b1. eg. ysw[, ys$[
+
+* ys[text-object][b1]: wrap the verb block with b1. eg. ysw[, ys$[
 
 ###Ctrl-P
 * Control-p: fuzzy search filenames
