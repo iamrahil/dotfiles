@@ -36,6 +36,7 @@ b1,b2: surrounding types. eg. ' " [] () {}
 ###Ctrl-P
 * Control-p: fuzzy search filenames
 * Control-y: fuzzy search tags in files
+
 ####Once open
 * Enter: open in current window
 * Control-v: to open in vertical split
