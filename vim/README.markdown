@@ -15,6 +15,13 @@ Leader is \
 * Control-ww: Move between windows
 * Control-w<Arrow/hjkl>: Move between windows directionally
 
+###Motion
+* Leader-Leader-s<b>: Search for character <b> in both directions
+* Leader-Leader-f<b>: Search for character <b> forwards
+* Leader-Leader-w: Start general forward find
+* Leader-Leader-b: Start general backward find
+
+
 ###Buffers/Tabs
 * Leader-b: List all buffers
 > Control-v/s/t to open in verticalsplit/horizontalsplit/tab
