@@ -22,7 +22,7 @@ Plug 'cohama/lexima.vim'
 "Navigation
 Plug 'kien/ctrlp.vim'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'justinmk/vim-sneak'
+Plug 'easymotion/vim-easymotion'
 Plug 'Yggdroot/indentLine'
 
 "Accessories
