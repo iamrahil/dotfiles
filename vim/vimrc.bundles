@@ -9,10 +9,8 @@ call plug#begin('~/.vim/plugged')
 "Syntax and autocomplete
 Plug 'wting/rust.vim', {'for': 'rust'}
 Plug 'scrooloose/syntastic'
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
 Plug 'scrooloose/nerdcommenter'
-Plug 'garbas/vim-snipmate'
+Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-surround'
 Plug 'editorconfig/editorconfig-vim'
