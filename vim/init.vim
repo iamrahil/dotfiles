@@ -24,7 +24,6 @@ map <F9> :TagbarToggle<cr>
 "Set a nice Omnifunc - <CTRL>X <CTRL>O
 set ofu=syntaxcomplete#Complete
 
- 
 " Make vim popup behave more like an IDE POPUP
 set completeopt=longest,menuone
 
