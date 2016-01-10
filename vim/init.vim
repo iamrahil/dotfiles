@@ -97,6 +97,7 @@ endfunction
 " NeoVim specific stuff
 if has('nvim')
 	let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+	let test#strategy = 'neovim' " for vim-test
 endif
 
 "Smart Home (VimTip315)
