@@ -80,6 +80,10 @@ map <leader>q :noh<CR>
 "Map CtrlPTag
 map <C-y> :CtrlPTag<CR>
 
+" Error mnemonic (Neomake uses location list)
+nnoremap ]e :lnext<CR>
+nnoremap [e :lprevious<CR>
+
 "Functions
 function Opaq()
 	set t_Co=256
@@ -117,6 +121,9 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/*,*/\.git/*,*/bower_components
 
 "signify: updte git markers when vim gains focus
 let g:signify_update_on_focusgained = 0
+
+"run Neomake on every document save
+autocmd! BufWritePost * Neomake
 
 "Tagbar config for Go
 let g:tagbar_type_go = {
