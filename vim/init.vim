@@ -82,8 +82,8 @@ endif
 nmap <C-e> :b#<CR>
 nmap <C-PageUp> :bnext<CR>
 nmap <C-PageDown> :bprev<CR>
-nmap <C-A-PageUp> :tabnext<CR>
-nmap <C-A-PageDown> :tabprev<CR>
+nmap <leader>] :tabnext<CR>
+nmap <leader>[ :tabprev<CR>
 
 "Toggle Highlights
 map <leader>q :noh<CR>
