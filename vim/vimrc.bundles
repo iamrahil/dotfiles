@@ -21,6 +21,7 @@ Plug 'cohama/lexima.vim'
 Plug 'tpope/vim-sleuth'
 Plug 'leafgarland/typescript-vim'
 Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'Shougo/deoplete.nvim'
 
 "Navigation
 Plug 'ctrlpvim/ctrlp.vim'
@@ -34,7 +35,6 @@ Plug 'unblevable/quick-scope'
 Plug 'bling/vim-airline'
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
-Plug 'vim-scripts/AutoComplPop'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'janko-m/vim-test', { 'on': ['TestFile', 'TestLast', 'TestNearest', 'TestSuite', 'TestVisit'] }
 Plug 'rking/ag.vim', { 'on': 'Ag' }
