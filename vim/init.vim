@@ -23,18 +23,11 @@ map <F8> :NERDTreeToggle<cr>
 map <F9> :TagbarToggle<cr>
 " let g:NERDTreeDirArrows=0
 
-"Set a nice Omnifunc - <CTRL>X <CTRL>O
-set ofu=syntaxcomplete#Complete
-
-" Make vim popup behave more like an IDE POPUP
-set completeopt=longest,menuone
-
 " Set default split positions
 set splitright
 set splitbelow
 
 " Make enter finish the completion popup menu
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 nnoremap gp `[v`] 
 set backspace=indent,eol,start
 colorscheme yowish
@@ -180,6 +173,8 @@ if has('cscope')
 
   command -nargs=0 Cscope cs add $VIMSRC/src/cscope.out $VIMSRC/src
 endif
+
+let g:deoplete#enable_at_startup = 1
 
 " Trigger a highlight in the appropriate direction when pressing these keys:
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
