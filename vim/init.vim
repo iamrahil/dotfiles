@@ -4,7 +4,6 @@ endif
 set runtimepath+=$GOROOT/misc/vim
 syntax on
 set number
-set rnu
 filetype plugin indent on
 set hlsearch
 set incsearch
