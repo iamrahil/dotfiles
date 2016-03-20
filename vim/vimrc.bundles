@@ -34,6 +34,7 @@ Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'vim-scripts/AutoComplPop'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'janko-m/vim-test', { 'on': ['TestFile', 'TestLast', 'TestNearest', 'TestSuite', 'TestVisit'] }
+Plug 'rking/ag.vim', { 'on': 'Ag' }
 
 "VCS
 Plug 'tpope/vim-fugitive'
