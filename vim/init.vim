@@ -15,6 +15,9 @@ set tabstop=4
 set shiftwidth=4
 map <Esc>[B <Down>]
 
+set undofile
+set undodir=~/.vim/undodir
+
 let g:CSApprox_verbose_level = 0
 map <F8> :NERDTreeToggle<cr>
 map <F9> :TagbarToggle<cr>
