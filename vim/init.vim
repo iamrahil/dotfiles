@@ -37,7 +37,7 @@ set splitbelow
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 nnoremap gp `[v`] 
 set backspace=indent,eol,start
-colorscheme desert256
+colorscheme yowish
 
 " Move lines
 nnoremap <C-Down> :m .+1<CR>==
@@ -63,10 +63,6 @@ if executable('ag')
 endif
 
 set laststatus=2
-
-if &t_Co == 256
-    colorscheme Tomorrow-Night-Bright
-endif
 
 "Display whitespace characters
 set listchars=tab:│\ ,trail:·
