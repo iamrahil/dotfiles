@@ -21,7 +21,7 @@ Plug 'cohama/lexima.vim'
 Plug 'tpope/vim-sleuth'
 
 "Navigation
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'easymotion/vim-easymotion'
 Plug 'Yggdroot/indentLine'
