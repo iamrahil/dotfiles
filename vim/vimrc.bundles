@@ -43,5 +43,6 @@ Plug 'mhinz/vim-signify'
 "Color Schemes
 Plug 'chriskempson/base16-vim'
 Plug 'KabbAmine/yowish.vim'
+Plug 'freeo/vim-kalisi'
 
 call plug#end()
