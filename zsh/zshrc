@@ -26,12 +26,3 @@ HISTSIZE=10000
 SAVEHIST=10000
 setopt inc_append_history
 setopt HIST_IGNORE_DUPS
-
-
-#Remove this hack later
-if [[ -a "~/.zprofile" ]]
-then
-	source ~/.zprofile
-else
-	source ~/.profile
-fi
