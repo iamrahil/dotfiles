@@ -181,6 +181,3 @@ if has('cscope')
   command -nargs=0 Cscope cs add $VIMSRC/src/cscope.out $VIMSRC/src
 endif
 
-" Neovim-qt Guifont command
-command -nargs=? Guifont call rpcnotify(0, 'Gui', 'SetFont', "<args>") | let g:Guifont="<args>"
-Guifont Fira Code
