@@ -26,6 +26,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'easymotion/vim-easymotion'
 Plug 'Yggdroot/indentLine'
 Plug 'terryma/vim-expand-region'
+Plug 'unblevable/quick-scope'
 
 "Accessories
 Plug 'bling/vim-airline'
