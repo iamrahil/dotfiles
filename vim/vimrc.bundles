@@ -19,6 +19,7 @@ Plug 'burnettk/vim-angular', { 'for': ['javascript','html']}
 Plug 'mattn/emmet-vim', {'for': 'html'}
 Plug 'cohama/lexima.vim'
 Plug 'tpope/vim-sleuth'
+Plug 'leafgarland/typescript-vim'
 
 "Navigation
 Plug 'ctrlpvim/ctrlp.vim'
