@@ -12,6 +12,9 @@ ln -s $HOME/.vim/gvimrc $HOME/.gvimrc
 mkdir -p $HOME/.config
 ln -s $PWD/vim $HOME/.config/nvim
 
+# Setup tmux
+ln -s $PWD/tmux/tmux.conf $HOME/.tmux.conf
+
 # Setup zsh
 git clone https://github.com/zsh-users/antigen.git $HOME/.antigen #FixMe: Standardize
 ln -s $PWD/zsh/zshrc $HOME/.zshrc
