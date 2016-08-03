@@ -22,6 +22,9 @@ Plug 'tpope/vim-sleuth'
 Plug 'leafgarland/typescript-vim'
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'Shougo/deoplete.nvim'
+Plug 'vim-erlang/vim-erlang-compiler', { 'for': 'erlang' }
+Plug 'vim-erlang/vim-erlang-runtime', { 'for': 'erlang' }
+Plug 'vim-erlang/vim-erlang-tags', { 'for': 'erlang' }
 
 "Navigation
 Plug 'ctrlpvim/ctrlp.vim'
