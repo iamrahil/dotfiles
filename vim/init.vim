@@ -181,3 +181,14 @@ let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
 " Trigger a highlight only when pressing f and F.
 let g:qs_highlight_on_keys = ['f', 'F']
+
+let g:neomake_elixir_mix_maker = {
+      \ 'exe' : 'mix',
+      \ 'args': ['compile', '--warnings-as-errors'],
+      \ 'cwd': getcwd(),
+      \ 'errorformat':
+        \ '** %s %f:%l: %m,' .
+        \ '%f:%l: warning: %m'
+      \ }
+
+let g:neomake_elixir_enabled_makers = ['mix']
