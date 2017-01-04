@@ -1,6 +1,7 @@
 if filereadable(expand("~/.vim/vimrc.bundles"))
 	source ~/.vim/vimrc.bundles
 endif
+set rtp^=/usr/share/vim/vimfiles/
 set runtimepath+=$GOROOT/misc/vim
 syntax on
 set number
