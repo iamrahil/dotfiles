@@ -37,6 +37,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'Yggdroot/indentLine'
 Plug 'terryma/vim-expand-region'
 Plug 'unblevable/quick-scope'
+Plug 'bogado/file-line'
 
 "Accessories
 Plug 'bling/vim-airline'
