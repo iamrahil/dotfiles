@@ -7,7 +7,7 @@ filetype off
 call plug#begin('~/.vim/plugged')
 
 "Syntax and autocomplete
-Plug 'wting/rust.vim', {'for': 'rust'}
+Plug 'sheerun/vim-polyglot'
 Plug 'benekastah/neomake', {'on': 'Neomake'}
 Plug 'scrooloose/nerdcommenter'
 Plug 'SirVer/ultisnips'
@@ -19,16 +19,13 @@ Plug 'burnettk/vim-angular', { 'for': ['javascript','html']}
 Plug 'mattn/emmet-vim', {'for': 'html'}
 Plug 'cohama/lexima.vim'
 Plug 'tpope/vim-sleuth'
-Plug 'leafgarland/typescript-vim'
-Plug 'fatih/vim-go', { 'for': 'go' }
-Plug 'vim-erlang/vim-erlang-compiler', { 'for': 'erlang' }
-Plug 'vim-erlang/vim-erlang-runtime', { 'for': 'erlang' }
-Plug 'vim-erlang/vim-erlang-tags', { 'for': 'erlang' }
-Plug 'elixir-lang/vim-elixir'
 Plug 'thinca/vim-ref'
-Plug 'awetzel/elixir.nvim', { 'do': 'yes \| ./install.sh' }
 Plug 'slashmili/alchemist.vim'
 Plug 'Shougo/deoplete.nvim'
+
+if !has('nvim')
+	Plug 'vim-scripts/AutoComplPop'
+endif
 
 "Navigation
 Plug 'ctrlpvim/ctrlp.vim'
