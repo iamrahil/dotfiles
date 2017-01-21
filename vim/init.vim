@@ -102,6 +102,9 @@ endfunction
 if has('nvim')
 	set termguicolors
 	let test#strategy = 'neovim' " for vim-test
+
+	" Neovim terminal mappings
+	tnoremap <Leader><ESC> <C-\><C-n>
 endif
 
 "Smart Home (VimTip315)
