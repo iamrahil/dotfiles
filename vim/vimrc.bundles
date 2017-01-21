@@ -47,6 +47,7 @@ Plug 'jeetsukumaran/vim-buffergator'
 Plug 'janko-m/vim-test', { 'on': ['TestFile', 'TestLast', 'TestNearest', 'TestSuite', 'TestVisit'] }
 Plug 'rking/ag.vim', { 'on': 'Ag' }
 Plug 'mhinz/vim-startify'
+Plug 'itchyny/vim-cursorword'
 
 "VCS
 Plug 'tpope/vim-fugitive'
