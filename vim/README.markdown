@@ -3,12 +3,12 @@ The vim config is made for working both in vim and neovim.
 
 Although neovim is targetted for primary support.
 
-##Shortcuts
+## Shortcuts
 Although reading through init.vim might be enough, some are listed for completeness
 
 Leader is \
 
-###General
+### General
 * F8: NERDTreeToggle
 * F9: TagbarToggle
 * gp: visually select last used block
@@ -17,14 +17,14 @@ Leader is \
 * Control-ww: Move between windows
 * Control-w[Arrow/hjkl]: Move between windows directionally
 
-###Motion
+### Motion
 * Leader-Leader-s[b]: Search for character [b] in both directions
 * Leader-Leader-f[b]: Search for character [b] forwards
 * Leader-Leader-w: Start general forward find
 * Leader-Leader-b: Start general backward find
 
 
-###Buffers/Tabs
+### Buffers/Tabs
 * Leader-b: List all buffers
 
 > Control-v/s/t to open in verticalsplit/horizontalsplit/tab
@@ -33,12 +33,12 @@ Leader is \
 * Control-PgUp/Dn: Switch between buffers
 * Control-Alt-PgUp/Dn: Switch between tabs
 
-###Comments
+### Comments
 * Leader-ci: toggle comments on line/block
 * Leader-cc: comment out line/block (warning! will add multiple comments on existing)
 * Leader-cu: Uncomment as above
 
-###Surround
+### Surround
 b1,b2: surrounding types. eg. ' " [] () {}
 * cs[b1][b2]: replace b1 with b2 on selected block. eg. 'asv' -> "asv".
 
@@ -46,11 +46,11 @@ b1,b2: surrounding types. eg. ' " [] () {}
 
 * ys[text-object][b1]: wrap the verb block with b1. eg. ysw[, ys$[
 
-###Ctrl-P
+### Ctrl-P
 * Control-p: fuzzy search filenames
 * Control-y: fuzzy search tags in files
 
-####Once open
+#### Once open
 * Enter: open in current window
 * Control-v: to open in vertical split
 * Control-x: to open in horizontal split
@@ -58,5 +58,5 @@ b1,b2: surrounding types. eg. ' " [] () {}
 * Control-o: prompt how to open
 * Control-z: select multiple
 
-###Multiple Cursors
+### Multiple Cursors
 * Ctrl-n: Select same word as multiple cursors
