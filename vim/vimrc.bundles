@@ -1,5 +1,5 @@
 if &compatible
-	set nocompatible
+  set nocompatible
 end
 
 filetype off
@@ -59,3 +59,5 @@ Plug 'KabbAmine/yowish.vim'
 Plug 'freeo/vim-kalisi'
 
 call plug#end()
+
+" vim: set ts=4 sw=2 et :

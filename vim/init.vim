@@ -1,5 +1,5 @@
 if filereadable(expand("~/.vim/vimrc.bundles"))
-	source ~/.vim/vimrc.bundles
+  source ~/.vim/vimrc.bundles
 endif
 set rtp^=/usr/share/vim/vimfiles/
 set runtimepath+=$GOROOT/misc/vim
@@ -90,21 +90,21 @@ nnoremap [e :lprevious<CR>
 
 "Functions
 function Opaq()
-	set t_Co=256
-	colorscheme Tomorrow-Night-Eighties
+  set t_Co=256
+  colorscheme Tomorrow-Night-Eighties
 endfunction
 
 function Transp()
-	set t_Co=128
+  set t_Co=128
 endfunction
 
 " NeoVim specific stuff
 if has('nvim')
-	set termguicolors
-	let test#strategy = 'neovim' " for vim-test
+  set termguicolors
+  let test#strategy = 'neovim' " for vim-test
 
-	" Neovim terminal mappings
-	tnoremap <Leader><ESC> <C-\><C-n>
+  " Neovim terminal mappings
+  tnoremap <Leader><ESC> <C-\><C-n>
 endif
 
 "Smart Home (VimTip315)
@@ -118,6 +118,7 @@ function! SmartHome()
   endif
   return &wrap && wincol() > 1 ? 'g^' : '^'
 endfunction
+
 noremap <expr> <silent> <Home> SmartHome()
 imap <silent> <Home> <C-O><Home>
 
@@ -209,4 +210,7 @@ function! AppendModeline()
   let l:modeline = substitute(&commentstring, "%s", l:modeline, "")
   call append(line("$"), l:modeline)
 endfunction
+
 nnoremap <silent> <Leader>ml :call AppendModeline()<CR>
+
+" vim: set ts=2 sw=2 et :
