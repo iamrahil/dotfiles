@@ -21,7 +21,7 @@ Plug 'cohama/lexima.vim'
 Plug 'tpope/vim-sleuth'
 Plug 'thinca/vim-ref'
 Plug 'slashmili/alchemist.vim'
-Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
 
 if !has('nvim')
