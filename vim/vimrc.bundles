@@ -22,6 +22,7 @@ Plug 'tpope/vim-sleuth'
 Plug 'thinca/vim-ref'
 Plug 'slashmili/alchemist.vim'
 Plug 'Shougo/deoplete.nvim'
+Plug 'zchee/deoplete-jedi'
 
 if !has('nvim')
 	Plug 'vim-scripts/AutoComplPop'
