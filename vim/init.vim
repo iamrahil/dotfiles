@@ -213,4 +213,8 @@ endfunction
 
 nnoremap <silent> <Leader>ml :call AppendModeline()<CR>
 
+" Choosewine settings
+nmap  <leader>w  <Plug>(choosewin)
+let g:choosewin_overlay_enable = 1
+
 " vim: set ts=2 sw=2 et :

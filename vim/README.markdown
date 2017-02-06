@@ -60,3 +60,6 @@ b1,b2: surrounding types. eg. ' " [] () {}
 
 ### Multiple Cursors
 * Ctrl-n: Select same word as multiple cursors
+
+### Window Selection (choosewin)
+* Leader-w: Select window from open windows
