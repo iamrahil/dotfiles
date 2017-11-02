@@ -16,7 +16,6 @@ antigen bundles <<EOBUNDLES
 EOBUNDLES
 
 antigen bundle kennethreitz/autoenv
-antigen bundle supercrabtree/k
 
 antigen theme ys
 
