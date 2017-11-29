@@ -14,6 +14,7 @@ ln -s $PWD/vim $HOME/.config/nvim
 
 # Setup tmux
 ln -s $PWD/tmux/tmux.conf $HOME/.tmux.conf
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Setup zsh
 git clone https://github.com/zsh-users/antigen.git $HOME/.antigen #FixMe: Standardize
