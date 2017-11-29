@@ -29,4 +29,4 @@ chsh -s /bin/zsh
 
 # Init zsh and antigen plugins
 touch $HOME/.profile  # Make sure this file exists to avoid warnings
-zsh
+zsh -l
