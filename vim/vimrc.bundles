@@ -46,7 +46,6 @@ Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'janko-m/vim-test', { 'on': ['TestFile', 'TestLast', 'TestNearest', 'TestSuite', 'TestVisit'] }
 Plug 'rking/ag.vim', { 'on': 'Ag' }
-Plug 'mhinz/vim-startify'
 Plug 'itchyny/vim-cursorword'
 Plug 'machakann/vim-highlightedyank'
 Plug 'itchyny/calendar.vim'
