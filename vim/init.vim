@@ -105,6 +105,9 @@ if has('nvim')
 
   " Neovim terminal mappings
   tnoremap <Leader><ESC> <C-\><C-n>
+
+  " Live substitute preview
+  set inccommand=nosplit
 endif
 
 " Vim specific stuff
