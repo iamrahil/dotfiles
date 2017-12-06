@@ -107,6 +107,11 @@ if has('nvim')
   tnoremap <Leader><ESC> <C-\><C-n>
 endif
 
+" Vim specific stuff
+if !has('nvim')
+  map y <Plug>(highlightedyank)
+endif
+
 "Smart Home (VimTip315)
 function! SmartHome()
   let first_nonblank = match(getline('.'), '\S') + 1
