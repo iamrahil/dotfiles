@@ -1,1 +1,2 @@
-Guifont Fira Mono:h9
+Guifont Fira Code:h9
+GuiLinespace 2
