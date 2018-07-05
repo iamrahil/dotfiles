@@ -37,7 +37,6 @@ Plug 'terryma/vim-expand-region'
 Plug 'unblevable/quick-scope'
 Plug 'bogado/file-line'
 Plug 't9md/vim-choosewin'
-Plug 'chaoren/vim-wordmotion'
 
 "Accessories
 Plug 'bling/vim-airline'
