@@ -1,6 +1,6 @@
 alias kick="sudo systemctl"
 alias throw="wget -O - "
-alias yt="youtube-dl --no-mtime -citw"
+alias yt='youtube-dl --no-mtime -ciw -o "%(title)s.%(ext)s"'
 alias esudo="sudo -E"
 alias gblista="git for-each-ref --sort=-committerdate refs/heads/ refs/remotes --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
 alias gblist="git for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
