@@ -23,6 +23,7 @@ Plug 'thinca/vim-ref'
 Plug 'slashmili/alchemist.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
+Plug 'benjie/local-npm-bin.vim', { 'for': ['javascript']}
 
 if !has('nvim')
 	Plug 'vim-scripts/AutoComplPop'
