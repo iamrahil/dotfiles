@@ -187,8 +187,6 @@ if has('cscope')
   command -nargs=0 Cscope cs add $VIMSRC/src/cscope.out $VIMSRC/src
 endif
 
-let g:deoplete#enable_at_startup = 1
-
 " Trigger a highlight in the appropriate direction when pressing these keys:
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
@@ -223,12 +221,5 @@ nnoremap <silent> <Leader>ml :call AppendModeline()<CR>
 " Choosewine settings
 nmap  <leader>w  <Plug>(choosewin)
 let g:choosewin_overlay_enable = 1
-
-let g:calendar_google_calendar = 1
-let g:calendar_google_task = 1
-
-" Vim-hardtime
-"let g:hardtime_default_on = 1
-"let g:hardtime_showmsg = 1
 
 " vim: set ts=2 sw=2 et :
