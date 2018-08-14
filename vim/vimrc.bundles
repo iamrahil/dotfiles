@@ -6,6 +6,8 @@ filetype off
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'wikitopian/hardmode'
+
 "Syntax and autocomplete
 Plug 'sheerun/vim-polyglot'
 Plug 'benekastah/neomake', {'on': 'Neomake'}
