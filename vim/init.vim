@@ -224,7 +224,4 @@ nnoremap <silent> <Leader>ml :call AppendModeline()<CR>
 nmap  <leader>w  <Plug>(choosewin)
 let g:choosewin_overlay_enable = 1
 
-let g:calendar_google_calendar = 1
-let g:calendar_google_task = 1
-
 " vim: set ts=2 sw=2 et :
