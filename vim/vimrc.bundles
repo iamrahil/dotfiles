@@ -40,9 +40,9 @@ Plug 't9md/vim-choosewin'
 
 "Accessories
 Plug 'bling/vim-airline'
-Plug 'majutsushi/tagbar'
+Plug 'majutsushi/tagbar', { 'on': ['TagbarToggle', 'TagbarOpen'] }
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
-Plug 'jeetsukumaran/vim-buffergator'
+Plug 'jeetsukumaran/vim-buffergator', { 'on': ['BuffergatorOpen', 'BuffergatorToggle'] }
 Plug 'janko-m/vim-test', { 'on': ['TestFile', 'TestLast', 'TestNearest', 'TestSuite', 'TestVisit'] }
 Plug 'rking/ag.vim', { 'on': 'Ag' }
 Plug 'itchyny/vim-cursorword'
