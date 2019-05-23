@@ -19,7 +19,6 @@ Plug 'burnettk/vim-angular', { 'for': ['javascript','html']}
 Plug 'mattn/emmet-vim', {'for': 'html'}
 Plug 'cohama/lexima.vim'
 Plug 'tpope/vim-sleuth'
-Plug 'thinca/vim-ref'
 Plug 'slashmili/alchemist.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
@@ -48,7 +47,6 @@ Plug 'janko-m/vim-test', { 'on': ['TestFile', 'TestLast', 'TestNearest', 'TestSu
 Plug 'rking/ag.vim', { 'on': 'Ag' }
 Plug 'itchyny/vim-cursorword'
 Plug 'machakann/vim-highlightedyank'
-Plug 'itchyny/calendar.vim'
 
 "VCS
 Plug 'tpope/vim-fugitive'
