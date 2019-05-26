@@ -23,6 +23,11 @@ Leader is \
 * Leader-Leader-w: Start general forward find
 * Leader-Leader-b: Start general backward find
 
+### Errors/Warnings/Lints
+* [L : Move to first lint warning
+* ]L : Move to last lint warning
+* ]l : Move to next lint warning
+* [l : Move to previous lint warning
 
 ### Buffers/Tabs
 * Leader-b: List all buffers
