@@ -51,6 +51,7 @@ Plug 'machakann/vim-highlightedyank'
 "VCS
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
+Plug 'jreybert/vimagit'
 
 "Color Schemes
 Plug 'chriskempson/base16-vim'
