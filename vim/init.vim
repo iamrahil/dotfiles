@@ -89,12 +89,11 @@ nnoremap [e :lprevious<CR>
 
 "Functions
 function Opaq()
-  set t_Co=256
-  colorscheme Tomorrow-Night-Eighties
+  colorscheme yowish
 endfunction
 
 function Transp()
-  set t_Co=128
+  hi! Normal ctermbg=NONE guibg=NONE
 endfunction
 
 " NeoVim specific stuff
