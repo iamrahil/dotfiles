@@ -14,8 +14,6 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-surround'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'tpope/vim-rails', {'for': 'ruby'}
-Plug 'burnettk/vim-angular', { 'for': ['javascript','html']}
 Plug 'mattn/emmet-vim', {'for': 'html'}
 Plug 'cohama/lexima.vim'
 Plug 'tpope/vim-sleuth'
@@ -28,7 +26,6 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 Plug 'benjie/local-npm-bin.vim', { 'for': ['javascript']}
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 if !has('nvim')
 	Plug 'vim-scripts/AutoComplPop'
@@ -50,7 +47,7 @@ Plug 'bling/vim-airline'
 Plug 'majutsushi/tagbar', { 'on': ['TagbarToggle', 'TagbarOpen'] }
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'jeetsukumaran/vim-buffergator', { 'on': ['BuffergatorOpen', 'BuffergatorToggle'] }
-Plug 'janko-m/vim-test', { 'on': ['TestFile', 'TestLast', 'TestNearest', 'TestSuite', 'TestVisit'] }
+Plug 'vim-test/vim-test', { 'on': ['TestFile', 'TestLast', 'TestNearest', 'TestSuite', 'TestVisit'] }
 Plug 'rking/ag.vim', { 'on': 'Ag' }
 Plug 'itchyny/vim-cursorword'
 Plug 'machakann/vim-highlightedyank'
