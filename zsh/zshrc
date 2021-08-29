@@ -10,8 +10,6 @@ antigen bundles <<EOBUNDLES
 	dirhistory
 	tmux
 	git-extras
-	command-not-found
-	rails
 	fancy-ctrl-z
 EOBUNDLES
 
@@ -28,3 +26,8 @@ setopt inc_append_history
 setopt HIST_IGNORE_DUPS
 
 source ~/.zshrc.alias
+source ~/.profile
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+eval "$(pyenv init -)"
