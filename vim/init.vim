@@ -214,4 +214,7 @@ let g:choosewin_overlay_enable = 1
 " For Lazy loading buffergator
 nnoremap <silent> <Leader>b :BuffergatorOpen<CR>
 
+let g:vim_markdown_conceal = 0
+let g:vim_markdown_conceal_code_blocks = 0
+
 " vim: set ts=2 sw=2 et :
