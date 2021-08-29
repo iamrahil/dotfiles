@@ -137,9 +137,6 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/*,*/\.git/*,*/bower_components
 "signify: updte git markers when vim gains focus
 let g:signify_update_on_focusgained = 0
 
-"run Neomake on every document save
-autocmd! BufWritePost * Neomake
-
 "Tagbar config for Go
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
@@ -193,19 +190,6 @@ let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
 " Trigger a highlight only when pressing f and F.
 let g:qs_highlight_on_keys = ['f', 'F']
-
-let g:airline#extensions#neomake#enabled = 0
-
-let g:neomake_elixir_mix_maker = {
-      \ 'exe' : 'mix',
-      \ 'args': ['compile', '--warnings-as-errors'],
-      \ 'cwd': getcwd(),
-      \ 'errorformat':
-        \ '** %s %f:%l: %m,' .
-        \ '%f:%l: warning: %m'
-      \ }
-
-let g:neomake_elixir_enabled_makers = ['mix']
 
 " Append modeline after last line in buffer.
 " Use substitute() instead of printf() to handle '%%s' modeline in LaTeX
