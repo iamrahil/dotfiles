@@ -189,6 +189,9 @@ call deoplete#custom#option('sources', {
 \ '_': ['ale'],
 \})
 
+" Set this. Airline will handle the rest.
+let g:airline#extensions#ale#enabled = 1
+
 " Trigger a highlight in the appropriate direction when pressing these keys:
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
