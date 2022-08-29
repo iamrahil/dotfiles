@@ -2,6 +2,7 @@ package bass
 package foreign-env
 package grc
 package nvm
+package pyenv
 package wd
 package wttr
 theme cbjohnson
