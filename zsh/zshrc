@@ -1,23 +1,28 @@
-source ~/.antigen/antigen.zsh
+source ~/.zplug/init.zsh
 
-antigen use oh-my-zsh
-antigen bundle zsh-users/zsh-syntax-highlighting
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
-antigen bundles <<EOBUNDLES
-	git
-	wd
-	per-directory-history
-	dirhistory
-	tmux
-	git-extras
-	fancy-ctrl-z
-EOBUNDLES
+zplug "plugins/git",   from:oh-my-zsh
+zplug "plugins/wd",   from:oh-my-zsh
+zplug "plugins/per-directory-history",   from:oh-my-zsh
+zplug "plugins/dirhistory",   from:oh-my-zsh
+zplug "plugins/tmux",   from:oh-my-zsh
+zplug "plugins/svn",   from:oh-my-zsh
+zplug "plugins/git-extras",   from:oh-my-zsh
+zplug "plugins/fancy-ctrl-z",   from:oh-my-zsh
 
-antigen bundle kennethreitz/autoenv
+zplug "themes/ys", from:oh-my-zsh, as:theme
 
-antigen theme ys
+zplug "kennethreitz/autoenv", defer:2
 
-antigen apply
+if ! zplug check; then
+    zplug install
+fi
+
+zplug load
+
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
 
 HISTFILE=~/.histfile
 HISTSIZE=10000

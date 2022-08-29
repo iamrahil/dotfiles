@@ -15,5 +15,6 @@ rm ~/.tmux.conf
 rm -rf ~/.zshrc
 rm -rf ~/.zshrc.alias
 rm -rf ~/.antigen
+rm -rf ~/.zplug
 
 chsh -s /bin/bash

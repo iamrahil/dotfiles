@@ -7,7 +7,7 @@ ln -s "$PWD"/tmux/tmux.conf "$HOME"/.tmux.conf
 git clone https://github.com/tmux-plugins/tpm "$HOME"/.tmux/plugins/tpm
 
 # Setup zsh
-git clone https://github.com/zsh-users/antigen.git "$HOME"/.antigen #FixMe: Standardize
+git clone https://github.com/zplug/zplug "$HOME"/.zplug
 ln -s "$PWD"/zsh/zshrc "$HOME"/.zshrc
 ln -s "$PWD"/zsh/zshrc.alias "$HOME"/.zshrc.alias #TODO: Remove this;
 
