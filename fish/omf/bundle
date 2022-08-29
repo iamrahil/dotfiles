@@ -1,0 +1,8 @@
+package bass
+package foreign-env
+package grc
+package nvm
+package wd
+package wttr
+theme cbjohnson
+theme default
