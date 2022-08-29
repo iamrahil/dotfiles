@@ -1,9 +1,8 @@
 #!/bin/bash
-set -x
 
 echo "Dependencies: vim, zsh"
 
-DIR=$(dirname $(readlink -f "$0"))
+DIR=$(dirname "$(readlink -f "$0")")
 # Setup vim
 ln -s "$DIR" "$HOME"/.vim
 ln -s "$HOME"/.vim/init.vim "$HOME"/.vimrc
