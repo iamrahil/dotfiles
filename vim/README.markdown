@@ -17,6 +17,8 @@ Leader is \
 * Control-ww: Move between windows
 * Control-w[Arrow/hjkl]: Move between windows directionally
 * Leader-ml: Print the modeline at the bottom of the file
+* Leader-ln: Print ruler on the cursor position
+* Leader-nl: Remove the ruler
 
 ### Motion
 * Leader-Leader-s[b]: Search for character [b] in both directions

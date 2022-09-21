@@ -220,4 +220,17 @@ nnoremap <silent> <Leader>b :BuffergatorOpen<CR>
 let g:vim_markdown_conceal = 0
 let g:vim_markdown_conceal_code_blocks = 0
 
+function! VerticalLineHere(doeet)
+    if a:doeet
+        let &colorcolumn=col('.')
+    else
+        let &colorcolumn=0
+    endif
+endfunction
+nnoremap <leader>line :call VerticalLineHere(1)<cr>
+nnoremap <leader>ln :call VerticalLineHere(1)<cr>
+nnoremap <leader>noline :call VerticalLineHere(0)<cr>
+nnoremap <leader>nl :call VerticalLineHere(0)<cr>
+
+
 " vim: set ts=2 sw=2 et :
