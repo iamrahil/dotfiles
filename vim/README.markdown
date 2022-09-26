@@ -34,6 +34,7 @@ Leader is \
 
 ### Buffers/Tabs
 * Leader-b: List all buffers
+* Leader-z: Zoom current buffer to full (Toggle)
 
 > Control-v/s/t to open in verticalsplit/horizontalsplit/tab
 

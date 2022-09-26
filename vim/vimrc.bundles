@@ -51,6 +51,7 @@ Plug 'vim-test/vim-test', { 'on': ['TestFile', 'TestLast', 'TestNearest', 'TestS
 Plug 'rking/ag.vim', { 'on': 'Ag' }
 Plug 'itchyny/vim-cursorword'
 Plug 'machakann/vim-highlightedyank'
+Plug 'markstory/vim-zoomwin'
 
 "VCS
 Plug 'tpope/vim-fugitive'
