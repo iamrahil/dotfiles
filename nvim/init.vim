@@ -1,5 +1,5 @@
-if filereadable(expand("~/.config/nvim/vimrc.bundles"))
-  source ~/.config/nvim/vimrc.bundles
+if filereadable(expand("~/.config/nvim/nvimrc.bundles"))
+  source ~/.config/nvim/nvimrc.bundles
 endif
 set rtp^=/usr/share/vim/vimfiles/
 set runtimepath+=$GOROOT/misc/vim
