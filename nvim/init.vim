@@ -97,21 +97,14 @@ function Transp()
 endfunction
 
 " NeoVim specific stuff
-if has('nvim')
-  set termguicolors
-  let test#strategy = 'neovim' " for vim-test
+set termguicolors
+let test#strategy = 'neovim' " for vim-test
 
-  " Neovim terminal mappings
-  tnoremap <Leader><ESC> <C-\><C-n>
+" Neovim terminal mappings
+tnoremap <Leader><ESC> <C-\><C-n>
 
-  " Live substitute preview
-  set inccommand=nosplit
-endif
-
-" Vim specific stuff
-if !has('nvim')
-  map y <Plug>(highlightedyank)
-endif
+" Live substitute preview
+set inccommand=nosplit
 
 "Smart Home (VimTip315)
 function! SmartHome()
