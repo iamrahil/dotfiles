@@ -1,5 +1,5 @@
-if filereadable(expand("~/.vim/vimrc.bundles"))
-  source ~/.vim/vimrc.bundles
+if filereadable(expand("~/.config/nvim/vimrc.bundles"))
+  source ~/.config/nvim/vimrc.bundles
 endif
 set rtp^=/usr/share/vim/vimfiles/
 set runtimepath+=$GOROOT/misc/vim
@@ -18,7 +18,7 @@ set shiftwidth=4
 map <Esc>[B <Down>]
 
 set undofile
-set undodir=~/.vim/undodir
+set undodir=~/.config/nvim/undodir
 
 map <F8> :NERDTreeToggle<cr>
 map <F9> :TagbarToggle<cr>
