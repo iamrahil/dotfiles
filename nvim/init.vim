@@ -1,5 +1,5 @@
-if filereadable(expand("~/.vim/vimrc.bundles"))
-  source ~/.vim/vimrc.bundles
+if filereadable(expand("~/.config/nvim/nvimrc.bundles"))
+  source ~/.config/nvim/nvimrc.bundles
 endif
 set rtp^=/usr/share/vim/vimfiles/
 set runtimepath+=$GOROOT/misc/vim
@@ -18,7 +18,7 @@ set shiftwidth=4
 map <Esc>[B <Down>]
 
 set undofile
-set undodir=~/.vim/undodir
+set undodir=~/.config/nvim/undodir
 
 map <F8> :NERDTreeToggle<cr>
 map <F9> :TagbarToggle<cr>
@@ -97,21 +97,14 @@ function Transp()
 endfunction
 
 " NeoVim specific stuff
-if has('nvim')
-  set termguicolors
-  let test#strategy = 'neovim' " for vim-test
+set termguicolors
+let test#strategy = 'neovim' " for vim-test
 
-  " Neovim terminal mappings
-  tnoremap <Leader><ESC> <C-\><C-n>
+" Neovim terminal mappings
+tnoremap <Leader><ESC> <C-\><C-n>
 
-  " Live substitute preview
-  set inccommand=nosplit
-endif
-
-" Vim specific stuff
-if !has('nvim')
-  map y <Plug>(highlightedyank)
-endif
+" Live substitute preview
+set inccommand=nosplit
 
 "Smart Home (VimTip315)
 function! SmartHome()

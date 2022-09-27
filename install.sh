@@ -1,6 +1,6 @@
 #!/bin/bash
 
-bash vim/install.sh
+bash nvim/install.sh
 
 bash tmux/install.sh
 

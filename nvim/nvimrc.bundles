@@ -4,7 +4,7 @@ end
 
 filetype off
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 "Syntax and autocomplete
 Plug 'sheerun/vim-polyglot'
@@ -18,18 +18,8 @@ Plug 'mattn/emmet-vim', {'for': 'html'}
 Plug 'cohama/lexima.vim'
 Plug 'tpope/vim-sleuth'
 Plug 'slashmili/alchemist.vim'
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'benjie/local-npm-bin.vim', { 'for': ['javascript']}
-
-if !has('nvim')
-	Plug 'vim-scripts/AutoComplPop'
-endif
 
 "Navigation
 Plug 'ctrlpvim/ctrlp.vim'
