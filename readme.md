@@ -23,3 +23,5 @@
 
 1. silversearcher-ag
 2. fzf
+3. fd
+4. ripgrep

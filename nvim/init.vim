@@ -48,12 +48,6 @@ let g:tex_flavor = "latex"
 if executable('ag')
   " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
 endif
 
 set laststatus=2
@@ -79,9 +73,6 @@ nmap <leader>[ :tabprev<CR>
 
 "Toggle Highlights
 map <leader>q :noh<CR>
-
-"Map CtrlPTag
-map <C-y> :CtrlPTag<CR>
 
 " Error mnemonic (Neomake uses location list)
 nnoremap ]e :lnext<CR>
@@ -228,5 +219,8 @@ nnoremap <leader>ln :call VerticalLineHere(1)<cr>
 nnoremap <leader>noline :call VerticalLineHere(0)<cr>
 nnoremap <leader>nl :call VerticalLineHere(0)<cr>
 
+nnoremap <c-P> <cmd>lua require('fzf-lua').files()<CR>
+nnoremap <c-Y> <cmd>lua require('fzf-lua').tags()<CR>
+nnoremap <c-L> :FzfLua<CR>
 
 " vim: set ts=2 sw=2 et :
