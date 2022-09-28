@@ -6,38 +6,12 @@ cmd([[
 
 map <Esc>[B <Down>]
 
-map <F8> :NERDTreeToggle<cr>
-map <F9> :TagbarToggle<cr>
 " let g:NERDTreeDirArrows=0
-
-nnoremap gp `[v`]
-
-" Move lines
-nnoremap <C-Down> :m .+1<CR>==
-nnoremap <C-Up> :m .-2<CR>==
-inoremap <C-Down> <Esc>:m .+1<CR>==gi
-inoremap <C-Up> <Esc>:m .-2<CR>==gi
-vnoremap <C-Down> :m '>+1<CR>gv=gv
-vnoremap <C-Up> :m '<-2<CR>gv=gv
 
 " Use ALE and also some plugin 'foobar' as completion sources for all code.
 call deoplete#custom#option('sources', {
 \ '_': ['ale'],
 \})
-
-"Buffer Mappings
-nmap <C-e> :b#<CR>
-nmap <C-PageUp> :bnext<CR>
-nmap <C-PageDown> :bprev<CR>
-nmap <leader>] :tabnext<CR>
-nmap <leader>[ :tabprev<CR>
-
-"Toggle Highlights
-map <leader>q :noh<CR>
-
-" Error mnemonic (Neomake uses location list)
-nnoremap ]e :lnext<CR>
-nnoremap [e :lprevious<CR>
 
 "Functions
 function Opaq()
@@ -110,8 +84,4 @@ nnoremap <leader>line :call VerticalLineHere(1)<cr>
 nnoremap <leader>ln :call VerticalLineHere(1)<cr>
 nnoremap <leader>noline :call VerticalLineHere(0)<cr>
 nnoremap <leader>nl :call VerticalLineHere(0)<cr>
-
-nnoremap <c-P> <cmd>Telescope find_files<CR>
-nnoremap <c-Y> <cmd>Telescope tags<CR>
-nnoremap <c-L> <cmd>Telescope<CR>
 ]])

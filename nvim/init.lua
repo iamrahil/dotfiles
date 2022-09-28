@@ -85,6 +85,7 @@ g['deoplete#enable_at_startup'] = 1  -- enable deoplete at startup
 
 -- Not yet migrated code
 require('vimscript')
+require('configs')
 
 require "telescope".setup {
   pickers = {
