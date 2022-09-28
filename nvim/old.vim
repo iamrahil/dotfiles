@@ -1,9 +1,3 @@
--- init.vim that has yet to be ported to init.lua
-
-local cmd = vim.cmd  -- to execute Vim commands e.g. cmd('pwd')
-
-cmd([[
-
 map <Esc>[B <Down>]
 
 " let g:NERDTreeDirArrows=0
@@ -84,4 +78,3 @@ nnoremap <leader>line :call VerticalLineHere(1)<cr>
 nnoremap <leader>ln :call VerticalLineHere(1)<cr>
 nnoremap <leader>noline :call VerticalLineHere(0)<cr>
 nnoremap <leader>nl :call VerticalLineHere(0)<cr>
-]])

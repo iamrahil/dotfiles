@@ -84,7 +84,11 @@ g.signify_update_on_focusgained = 0
 g['deoplete#enable_at_startup'] = 1  -- enable deoplete at startup
 
 -- Not yet migrated code
-require('vimscript')
+cmd([[
+  if filereadable(expand("~/.config/nvim/old.vim"))
+    source ~/.config/nvim/old.vim
+  endif
+]])
 require('configs')
 
 require "telescope".setup {
