@@ -151,9 +151,6 @@ nnoremap <silent> <Leader>ml :call AppendModeline()<CR>
 nmap  <leader>w  <Plug>(choosewin)
 let g:choosewin_overlay_enable = 1
 
-" For Lazy loading buffergator
-nnoremap <silent> <Leader>b :BuffergatorOpen<CR>
-
 let g:vim_markdown_conceal = 0
 let g:vim_markdown_conceal_code_blocks = 0
 
@@ -172,6 +169,8 @@ nnoremap <leader>nl :call VerticalLineHere(0)<cr>
 nnoremap <c-P> <cmd>Telescope find_files<CR>
 nnoremap <c-Y> <cmd>Telescope tags<CR>
 nnoremap <c-L> <cmd>Telescope<CR>
+nnoremap <Leader>b <cmd>Telescope buffers<CR>
+
 
 lua <<EOF
 require "telescope".setup {

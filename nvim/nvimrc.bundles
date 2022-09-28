@@ -37,7 +37,6 @@ Plug 'tpope/vim-unimpaired'
 Plug 'bling/vim-airline'
 Plug 'majutsushi/tagbar', { 'on': ['TagbarToggle', 'TagbarOpen'] }
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
-Plug 'jeetsukumaran/vim-buffergator', { 'on': ['BuffergatorOpen', 'BuffergatorToggle'] }
 Plug 'vim-test/vim-test', { 'on': ['TestFile', 'TestLast', 'TestNearest', 'TestSuite', 'TestVisit'] }
 Plug 'rking/ag.vim', { 'on': 'Ag' }
 Plug 'itchyny/vim-cursorword'
