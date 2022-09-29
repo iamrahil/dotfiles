@@ -25,6 +25,7 @@ SETUVAR _fish_abbr_glgg:git\x20log\x20\x2d\x2dgraph
 SETUVAR _fish_abbr_glog:git\x20log\x20\x2d\x2doneline\x20\x2d\x2ddecorate\x20\x2d\x2dgraph
 SETUVAR _fish_abbr_gp:git\x20push
 SETUVAR _fish_abbr_gpu:git\x20push\x20\x2du\x20origin\x20\x28current_branch\x29
+SETUVAR _fish_abbr_gpuc:git\x20push\x20\x2du\x20origin\x20\x28current_branch\x29
 SETUVAR _fish_abbr_grh:git\x20reset\x20HEAD
 SETUVAR _fish_abbr_grhh:git\x20reset\x20\x2d\x2dhard
 SETUVAR _fish_abbr_grpe:grep
