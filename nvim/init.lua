@@ -130,4 +130,13 @@ require "telescope".setup {
     }
   }
 }
+
+cmd([[
+  if filereadable(expand("~/.config/nvim/custom.vim"))
+    source ~/.config/nvim/custom.vim
+  endif
+]])
+
+pcall(function() require('custom') end)
+
 -- vim: set ts=2 sw=2 tw=0 et :
