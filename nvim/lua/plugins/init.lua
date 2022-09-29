@@ -60,6 +60,10 @@ return require('packer').startup(function(use)
   use 'kyazdani42/nvim-web-devicons'
   use 'bling/vim-airline'
   use {
+    'kyazdani42/nvim-tree.lua',
+    config = plugconf.nvimtree,
+  }
+  use {
     'majutsushi/tagbar',
     opt = true,
     cmd = {'TagbarToggle', 'TagbarOpen'}

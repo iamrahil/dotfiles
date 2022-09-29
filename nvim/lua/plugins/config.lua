@@ -20,6 +20,11 @@ function config.telescope()
     }
   }
 end
+
+function config.nvimtree()
+  -- empty setup using defaults
+  require("nvim-tree").setup()
+end
 return config
 
 -- vim: set ts=2 sw=2 tw=0 et :

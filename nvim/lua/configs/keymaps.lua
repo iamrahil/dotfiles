@@ -23,7 +23,7 @@ end
 
 -- KEYBINDINGS
 
-map('<F8>', ':NERDTreeToggle<cr>', {})
+map('<F8>', ':NvimTreeToggle<cr>', {})
 map('<F9>', ':TagbarToggle<cr>', {})
 
 nmap('gp', '`[v`]', norem)
