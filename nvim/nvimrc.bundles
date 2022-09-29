@@ -21,6 +21,7 @@ Plug 'slashmili/alchemist.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'benjie/local-npm-bin.vim', { 'for': ['javascript']}
 Plug 'scalameta/nvim-metals'
+Plug 'rafcamlet/nvim-luapad'
 
 "Navigation
 Plug 'nvim-lua/plenary.nvim'
