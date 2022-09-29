@@ -97,6 +97,27 @@ vim.api.nvim_create_autocmd("FileType", {
   pattern = { "scala", "sbt", "java" },
   callback = function()
     require("metals").initialize_or_attach({})
+    -- TODO: Move these keybindings elsewhere
+    local norem = {noremap = true}
+    vim.api.nvim_set_keymap('n', "gD", "<cmd>lua vim.lsp.buf.definition()<CR>", {})
+    vim.api.nvim_set_keymap('n', "K", "<cmd>lua vim.lsp.buf.hover()<CR>", norem)
+    vim.api.nvim_set_keymap('n', "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", norem)
+    vim.api.nvim_set_keymap('n', "gr", "<cmd>lua vim.lsp.buf.references()<CR>", norem)
+    vim.api.nvim_set_keymap('n', "gds", "<cmd>lua vim.lsp.buf.document_symbol()<CR>", norem)
+    vim.api.nvim_set_keymap('n', "gws", "<cmd>lua vim.lsp.buf.workspace_symbol()<CR>", norem)
+    vim.api.nvim_set_keymap('n', "<leader>cl", [[<cmd>lua vim.lsp.codelens.run()<CR>]], norem)
+    vim.api.nvim_set_keymap('n', "<leader>sh", [[<cmd>lua vim.lsp.buf.signature_help()<CR>]], norem)
+    vim.api.nvim_set_keymap('n', "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", norem)
+    vim.api.nvim_set_keymap('n', "<leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", norem)
+    vim.api.nvim_set_keymap('n', "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", norem)
+    vim.api.nvim_set_keymap('n', "<leader>ws", '<cmd>lua require"metals".hover_worksheet()<CR>', norem)
+    vim.api.nvim_set_keymap('n', "<leader>aa", [[<cmd>lua vim.diagnostic.setqflist()<CR>]], norem) -- all workspace diagnostics
+    vim.api.nvim_set_keymap('n', "<leader>ae", [[<cmd>lua vim.diagnostic.setqflist({severity = "E"})<CR>]], norem) -- all workspace errors
+    vim.api.nvim_set_keymap('n', "<leader>aw", [[<cmd>lua vim.diagnostic.setqflist({severity = "W"})<CR>]], norem) -- all workspace warnings
+    vim.api.nvim_set_keymap('n', "<leader>d", "<cmd>lua vim.diagnostic.setloclist()<CR>", norem) -- buffer diagnostics only
+    vim.api.nvim_set_keymap('n', "[l", "<cmd>lua vim.diagnostic.goto_prev { wrap = false }<CR>", norem)
+    vim.api.nvim_set_keymap('n', "]l", "<cmd>lua vim.diagnostic.goto_next { wrap = false }<CR>", norem)
+    vim.api.nvim_set_keymap('n', "<c-k>", '<cmd>Telescope metals commands<CR>', norem)
   end,
   group = nvim_metals_group,
 })
