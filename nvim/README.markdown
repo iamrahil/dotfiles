@@ -1,10 +1,9 @@
 # VIM config
-The vim config is made for working both in vim and neovim.
 
-Although neovim is targetted for primary support.
+The vim config is made for working in Neovim > 0.7
 
 ## Shortcuts
-Although reading through init.vim might be enough, some are listed for completeness
+Although reading through init.lua and lua/configs/keymaps.lua might be enough, some are listed for completeness
 
 Leader is \
 
@@ -64,11 +63,10 @@ b1,b2: surrounding types. eg. ' " [] () {}
 * Control-v: to open in vertical split
 * Control-x: to open in horizontal split
 * Control-t: to open in new tab
-* Control-o: prompt how to open
-* Control-z: select multiple
 
 ### Multiple Cursors
 * Ctrl-n: Select same word as multiple cursors
+
 
 ### Window Selection (choosewin)
 * Leader-w: Select window from open windows
@@ -77,7 +75,7 @@ b1,b2: surrounding types. eg. ' " [] () {}
 ### GIT Workflows
 
 * Leader-M: open ViMagit (:Magit)
-* :Gblame : Open Git-blame for current file (fugitive)
+* :Git blame : Open Git-blame for current file (fugitive)
 
 ### Clipboard
 * " : in Normal/Visual mode, open the clipboard registers
