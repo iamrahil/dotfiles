@@ -55,4 +55,5 @@ nmap('[e', ':lprevious<CR>', norem)
 -- Telescope
 nmap('<c-P>', '<cmd>Telescope find_files<CR>', norem)
 nmap('<c-Y>', '<cmd>Telescope tags<CR>', norem)
+nmap('<leader>b', '<cmd>Telescope buffers<CR>', norem)
 nmap('<c-L>', '<cmd>Telescope<CR>', norem)
