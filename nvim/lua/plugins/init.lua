@@ -41,10 +41,11 @@ return require('packer').startup(function(use)
   -- Navigation
   use {
     'nvim-telescope/telescope.nvim',
-    opt = false,
     branch = '0.1.x',
     requires = { 'nvim-lua/plenary.nvim' },
     config = plugconf.telescope,
+    cmd = 'Telescope',
+    module = 'telescope',
   }
   use 'terryma/vim-multiple-cursors'
   use 'easymotion/vim-easymotion'
