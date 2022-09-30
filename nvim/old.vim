@@ -2,11 +2,6 @@ map <Esc>[B <Down>]
 
 " let g:NERDTreeDirArrows=0
 
-" Use ALE and also some plugin 'foobar' as completion sources for all code.
-call deoplete#custom#option('sources', {
-\ '_': ['ale'],
-\})
-
 "Functions
 function Opaq()
   colorscheme yowish

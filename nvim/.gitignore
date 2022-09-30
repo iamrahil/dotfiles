@@ -4,3 +4,4 @@ plugged
 undodir
 custom.vim
 lua/custom/*
+plugin/packer_compiled.lua

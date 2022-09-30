@@ -5,11 +5,9 @@ local opt = vim.opt  -- to set optionslocal cmd = vim.cmd
 
 local HOME = os.getenv('HOME')
 
-cmd([[
-  if filereadable(expand("~/.config/nvim/nvimrc.bundles"))
-    source ~/.config/nvim/nvimrc.bundles
-  endif
+require('plugins')
 
+cmd([[
   set rtp^=/usr/share/vim/vimfiles/
   set runtimepath+=$GOROOT/misc/vim
   syntax on
@@ -81,8 +79,6 @@ end
 --signify: updte git markers when vim gains focus
 g.signify_update_on_focusgained = 0
 
-g['deoplete#enable_at_startup'] = 1  -- enable deoplete at startup
-
 -- Not yet migrated code
 cmd([[
   if filereadable(expand("~/.config/nvim/old.vim"))
@@ -122,14 +118,6 @@ vim.api.nvim_create_autocmd("FileType", {
   group = nvim_metals_group,
 })
 vim.opt_global.shortmess:remove("F")
-
-require "telescope".setup {
-  pickers = {
-    colorscheme = {
-      enable_preview = true
-    }
-  }
-}
 
 cmd([[
   if filereadable(expand("~/.config/nvim/custom.vim"))

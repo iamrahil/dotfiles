@@ -8,6 +8,7 @@ rm ~/.vim
 rm ~/.vimrc
 rm ~/.gvimrc
 rm ~/.config/nvim
+rm -rf ~/.local/share/nvim/
 
 rm -rf ~/.tmux
 rm ~/.tmux.conf
