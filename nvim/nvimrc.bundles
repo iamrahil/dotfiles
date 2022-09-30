@@ -45,6 +45,7 @@ Plug 'rking/ag.vim', { 'on': 'Ag' }
 Plug 'itchyny/vim-cursorword'
 Plug 'machakann/vim-highlightedyank'
 Plug 'markstory/vim-zoomwin'
+Plug 'tversteeg/registers.nvim', { 'branch': 'main' }
 
 "VCS
 Plug 'tpope/vim-fugitive'

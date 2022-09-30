@@ -78,3 +78,7 @@ b1,b2: surrounding types. eg. ' " [] () {}
 
 * Leader-M: open ViMagit (:Magit)
 * :Gblame : Open Git-blame for current file (fugitive)
+
+### Clipboard
+* " : in Normal/Visual mode, open the clipboard registers
+* <Ctrl-R> : in Insert mode, open the clipboard registers
