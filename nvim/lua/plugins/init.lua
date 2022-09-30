@@ -52,7 +52,7 @@ return require('packer').startup(function(use)
   use 'Yggdroot/indentLine'
   use 'terryma/vim-expand-region'
   use 'unblevable/quick-scope'
-  use 'bogado/file-line'
+  use 'bogado/file-line' -- Open file at given line number eg: nvim init.lua:15
   use 't9md/vim-choosewin'
   use 'tpope/vim-unimpaired'
 
@@ -78,7 +78,7 @@ return require('packer').startup(function(use)
   }
 
   use { 'rking/ag.vim', opt = true, cmd = {'Ag'} }
-  use 'itchyny/vim-cursorword'
+  use 'itchyny/vim-cursorword'  -- Underline word under the cursor
   use 'machakann/vim-highlightedyank'
   use 'markstory/vim-zoomwin'
   use {
