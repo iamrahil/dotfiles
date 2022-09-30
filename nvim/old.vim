@@ -1,5 +1,7 @@
 map <Esc>[B <Down>]
 
+" highlight yanked text for some duration
+au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=250}
 " let g:NERDTreeDirArrows=0
 
 "Functions
