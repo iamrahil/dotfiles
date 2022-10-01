@@ -25,6 +25,22 @@ function config.nvimtree()
   -- empty setup using defaults
   require("nvim-tree").setup()
 end
+
+function config.treesitter()
+  require('nvim-treesitter.configs').setup {
+    ensire_installed = {
+      'lua',
+      'ruby',
+      'javascript',
+      'json',
+    },
+    auto_install = true,
+    highlight = {
+      enable = true,
+    },
+  }
+end
+
 return config
 
 -- vim: set ts=2 sw=2 tw=0 et :

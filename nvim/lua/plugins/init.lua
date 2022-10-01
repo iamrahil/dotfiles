@@ -18,6 +18,11 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- Syntax and autocomplete
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate',
+    config = plugconf.treesitter,
+  }
   use 'sheerun/vim-polyglot'
   use 'dense-analysis/ale'
   use 'scrooloose/nerdcommenter'
