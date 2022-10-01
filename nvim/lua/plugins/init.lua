@@ -95,6 +95,11 @@ return require('packer').startup(function(use)
     keys = { { 'n', '"' }, { 'i', '<c-r>' } }
   }
 
+  use {
+    'ethanholz/nvim-lastplace',
+    config = plugconf.lastplace,
+  }
+
   -- VCS
   use 'tpope/vim-fugitive'
   use 'mhinz/vim-signify'

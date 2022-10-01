@@ -41,6 +41,14 @@ function config.treesitter()
   }
 end
 
+function config.lastplace()
+  require'nvim-lastplace'.setup {
+    lastplace_ignore_buftype = {"quickfix", "nofile", "help"},
+    lastplace_ignore_filetype = {"gitcommit", "gitrebase", "svn", "hgcommit"},
+    lastplace_open_folds = true
+  }
+end
+
 return config
 
 -- vim: set ts=2 sw=2 tw=0 et :
