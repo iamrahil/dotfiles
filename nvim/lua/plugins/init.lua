@@ -100,6 +100,13 @@ return require('packer').startup(function(use)
     config = plugconf.lastplace,
   }
 
+  use {
+    "ellisonleao/glow.nvim",
+    ft = {'markdown'},
+    opt = true,
+    cmd = 'Glow'
+  }
+
   -- VCS
   use 'tpope/vim-fugitive'
   use 'mhinz/vim-signify'
