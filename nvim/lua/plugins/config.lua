@@ -39,8 +39,8 @@ function config.treesitter()
       'lua',
       'ruby',
       'javascript',
-      'json',
     },
+    ignore_install = { "json" },
     auto_install = true,
     highlight = {
       enable = true,
