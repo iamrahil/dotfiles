@@ -23,7 +23,14 @@ end
 
 function config.nvimtree()
   -- empty setup using defaults
-  require("nvim-tree").setup()
+  require("nvim-tree").setup({
+      view = {
+        adaptive_size = true
+      },
+      renderer = {
+          indent_width = 1
+        }
+    })
 end
 
 function config.treesitter()
