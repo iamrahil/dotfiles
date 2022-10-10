@@ -111,6 +111,7 @@ return require('packer').startup(function(use)
   use 'tpope/vim-fugitive'
   use 'mhinz/vim-signify'
   use 'jreybert/vimagit'
+  use 'rhysd/committia.vim'
 
   -- Color Schemes
   use 'chriskempson/base16-vim'
