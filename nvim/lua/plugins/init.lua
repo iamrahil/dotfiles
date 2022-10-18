@@ -107,6 +107,16 @@ return require('packer').startup(function(use)
     cmd = 'Glow'
   }
 
+  use {
+    'sudormrfbin/cheatsheet.nvim',
+
+    requires = {
+      {'nvim-telescope/telescope.nvim'},
+      {'nvim-lua/popup.nvim'},
+      {'nvim-lua/plenary.nvim'},
+    }
+  }
+
   -- VCS
   use 'tpope/vim-fugitive'
   use 'mhinz/vim-signify'

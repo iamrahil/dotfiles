@@ -18,6 +18,7 @@ Leader is \
 * Leader-ml: Print the modeline at the bottom of the file
 * Leader-ln: Print ruler on the cursor position
 * Leader-nl: Remove the ruler
+* Leader-? : Open cheatsheet (:CheatSheet! to open in popup)
 
 ### Motion
 * Leader-Leader-s[b]: Search for character [b] in both directions
