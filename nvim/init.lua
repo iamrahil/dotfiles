@@ -63,7 +63,8 @@ end
 -- Set colorscheme
 cmd([[
   try
-    colorscheme yowish
+    let g:material_style = "darker"
+    colorscheme material
     catch
   endtry
 ]])

@@ -127,6 +127,7 @@ return require('packer').startup(function(use)
   use 'chriskempson/base16-vim'
   use 'KabbAmine/yowish.vim'
   use 'freeo/vim-kalisi'
+  use 'marko-cerovac/material.nvim'
 
   if packer_bootstrap then
     require('packer').sync()
