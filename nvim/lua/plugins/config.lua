@@ -35,7 +35,7 @@ end
 
 function config.treesitter()
   require('nvim-treesitter.configs').setup {
-    ensire_installed = {
+    ensure_installed = {
       'lua',
       'ruby',
       'javascript',
