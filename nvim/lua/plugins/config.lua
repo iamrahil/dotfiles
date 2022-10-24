@@ -36,14 +36,15 @@ end
 function config.treesitter()
   require('nvim-treesitter.configs').setup {
     ensure_installed = {
-      'lua',
-      'ruby',
-      'javascript',
+      "lua",
+      "ruby",
+      "javascript",
     },
     ignore_install = { "json" },
     auto_install = true,
     highlight = {
       enable = true,
+      disable = { "json" }
     },
   }
 end
