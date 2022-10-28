@@ -1,3 +1,4 @@
 omf/theme
 fish/fish_variables
 fish/functions/fish_prompt.fish
+fish/config.fish
