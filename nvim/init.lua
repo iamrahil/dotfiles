@@ -105,7 +105,7 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.api.nvim_set_keymap('n', "<leader>cl", [[<cmd>lua vim.lsp.codelens.run()<CR>]], norem)
     vim.api.nvim_set_keymap('n', "<leader>sh", [[<cmd>lua vim.lsp.buf.signature_help()<CR>]], norem)
     vim.api.nvim_set_keymap('n', "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", norem)
-    vim.api.nvim_set_keymap('n', "<leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", norem)
+    vim.api.nvim_set_keymap('n', "<leader>f", "<cmd>lua vim.lsp.buf.format()<CR>", norem)
     vim.api.nvim_set_keymap('n', "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", norem)
     vim.api.nvim_set_keymap('n', "<leader>ws", '<cmd>lua require"metals".hover_worksheet()<CR>', norem)
     vim.api.nvim_set_keymap('n', "<leader>aa", [[<cmd>lua vim.diagnostic.setqflist()<CR>]], norem) -- all workspace diagnostics
