@@ -3,6 +3,7 @@ package foreign-env
 package grc
 package nvm
 package pyenv
+package rvm
 package wd
 package wttr
 theme ays
