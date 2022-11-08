@@ -42,6 +42,7 @@ return require('packer').startup(function(use)
   use { 'benjie/local-npm-bin.vim', ft = {'javascript'} }
   use 'scalameta/nvim-metals'
   use 'rafcamlet/nvim-luapad'
+  use { 'neovim/nvim-lspconfig', config = plugconf.lspconfig }
 
   -- Navigation
   use {

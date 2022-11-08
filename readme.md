@@ -23,3 +23,4 @@
 
 1. silversearcher-ag
 2. fzf
+3. Solargraph for ruby dev

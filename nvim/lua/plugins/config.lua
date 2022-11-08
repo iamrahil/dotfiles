@@ -57,6 +57,22 @@ function config.lastplace()
   }
 end
 
+function config.lspconfig()
+  -- Use a loop to conveniently call 'setup' on multiple servers and
+  -- map buffer local keybindings when the language server attaches
+  local nvim_lsp = require('lspconfig')
+  local lspconf = require('configs.lsp')
+  local servers = { "solargraph" }
+  for _, lsp in ipairs(servers) do
+    nvim_lsp[lsp].setup {
+      on_attach = lspconf.keymaps,
+      flags = {
+        debounce_text_changes = 150,
+      }
+    }
+  end
+end
+
 return config
 
 -- vim: set ts=2 sw=2 tw=0 et :
