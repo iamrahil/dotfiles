@@ -83,7 +83,7 @@ b1,b2: surrounding types. eg. ' " [] () {}
 
 ### Clipboard
 * " : in Normal/Visual mode, open the clipboard registers
-* <Ctrl-R> : in Insert mode, open the clipboard registers
+* Control-R : in Insert mode, open the clipboard registers
 
 ### LSP specific keybindings
 
