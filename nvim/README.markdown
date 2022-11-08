@@ -81,3 +81,16 @@ b1,b2: surrounding types. eg. ' " [] () {}
 ### Clipboard
 * " : in Normal/Visual mode, open the clipboard registers
 * <Ctrl-R> : in Insert mode, open the clipboard registers
+
+### LSP specific keybindings
+
+For more info refer [this file](lua/configs/lsp.lua)
+
+* gD : Jump to declaration
+* gd : Jump to definition
+* K : Show popup of signature/type
+* gi : Jump to implementation
+* gr : Jump to/List all references in quickfix window
+* Leader-f : Format the current buffer for lint
+* [d : Jump to prev code issue
+* ]d : Jump to next code issue
