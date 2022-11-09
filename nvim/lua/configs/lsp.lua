@@ -1,8 +1,6 @@
 local nvim_lsp = require('lspconfig')
 local conf = {}
 
--- Use an on_attach function to only map the following keys
--- after the language server attaches to the current buffer
 function conf.keymaps(client, bufnr)
   if not bufnr then
     bufnr = vim.api.nvim_get_current_buf()
@@ -44,18 +42,6 @@ function conf.keymaps(client, bufnr)
   --buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
 
 end
-
--- Use a loop to conveniently call 'setup' on multiple servers and
--- map buffer local keybindings when the language server attaches
---local servers = { "solargraph" }
---for _, lsp in ipairs(servers) do
-  --nvim_lsp[lsp].setup {
-    --on_attach = on_attach,
-    --flags = {
-      --debounce_text_changes = 150,
-    --}
-  --}
---end
 
 return conf
 --  vim: set ts=4 sw=2 tw=0 et :
