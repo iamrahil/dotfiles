@@ -93,7 +93,9 @@ return require('packer').startup(function(use)
   use {
     'tversteeg/registers.nvim',
     branch = 'main',
-    keys = { { 'n', '"' }, { 'i', '<c-r>' } }
+    keys = { { 'n', '"' }, { 'i', '<c-r>' } },
+    cmd = {'Registers'},
+    config = plugconf.registers
   }
 
   use {

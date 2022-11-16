@@ -49,6 +49,10 @@ function config.treesitter()
   }
 end
 
+function config.registers()
+  require("registers").setup()
+end
+
 function config.lastplace()
   require'nvim-lastplace'.setup {
     lastplace_ignore_buftype = {"quickfix", "nofile", "help"},
