@@ -90,6 +90,7 @@ return require('packer').startup(function(use)
   use { 'rking/ag.vim', opt = true, cmd = {'Ag'} }
   use 'itchyny/vim-cursorword'  -- Underline word under the cursor
   use 'markstory/vim-zoomwin'
+  use { 'ojroques/nvim-osc52' }
   use {
     'tversteeg/registers.nvim',
     branch = 'main',
