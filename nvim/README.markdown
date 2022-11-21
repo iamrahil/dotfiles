@@ -97,3 +97,9 @@ For more info refer [this file](lua/configs/lsp.lua)
 * Leader-f : Format the current buffer for lint
 * [d : Jump to prev code issue
 * ]d : Jump to next code issue
+
+### Terminal
+* Leader-t : Open terminal in new tab
+* Leader-v : Open terminal in vertical split
+* Leader-x : Open terminal in horizontal split
+* Leader-Esc : Escape from terminal input mode to normal mode

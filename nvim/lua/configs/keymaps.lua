@@ -58,3 +58,8 @@ nmap('<c-Y>', '<cmd>Telescope tags<CR>', norem)
 nmap('<leader>b', '<cmd>Telescope buffers<CR>', norem)
 nmap('<c-L>', '<cmd>Telescope<CR>', norem)
 nmap('<c-;>', '<cmd>Telescope commands<CR>', norem)
+
+-- Terminal Shortcuts
+nmap('<leader>t', ':tabnew | term<CR>', norem)
+nmap('<leader>v', ':vsplit | term<CR>', norem)
+nmap('<leader>x', ':split | term<CR>', norem)
