@@ -80,6 +80,7 @@ b1,b2: surrounding types. eg. ' " [] () {}
 
 * Leader-M: open ViMagit (:Magit)
 * :Git blame : Open Git-blame for current file (fugitive)
+* Leader-gm : open popup to show last commit blame of the line
 
 ### Clipboard
 * " : in Normal/Visual mode, open the clipboard registers

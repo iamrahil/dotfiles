@@ -126,6 +126,7 @@ return require('packer').startup(function(use)
   use 'mhinz/vim-signify'
   use 'jreybert/vimagit'
   use 'rhysd/committia.vim'
+  use { 'rhysd/git-messenger.vim', config = plugconf.gitmessenger }
 
   -- Color Schemes
   use 'chriskempson/base16-vim'
