@@ -75,3 +75,13 @@ nnoremap <leader>line :call VerticalLineHere(1)<cr>
 nnoremap <leader>ln :call VerticalLineHere(1)<cr>
 nnoremap <leader>noline :call VerticalLineHere(0)<cr>
 nnoremap <leader>nl :call VerticalLineHere(0)<cr>
+
+function! s:GotoFirstFloat() abort
+  for w in range(1, winnr('$'))
+    let c = nvim_win_get_config(win_getid(w))
+    if c.focusable && !empty(c.relative)
+      execute w . 'wincmd w'
+    endif
+  endfor
+endfunction
+noremap <silent> <c-w><space> :<c-u>call <sid>GotoFirstFloat()<cr>

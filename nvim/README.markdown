@@ -72,9 +72,9 @@ b1,b2: surrounding types. eg. ' " [] () {}
 * Ctrl-n: Select same word as multiple cursors
 
 
-### Window Selection (choosewin)
+### Window Selection
 * Leader-w: Select window from open windows
-
+* <Control-W><Space> : Switch to a popup window
 
 ### GIT Workflows
 
