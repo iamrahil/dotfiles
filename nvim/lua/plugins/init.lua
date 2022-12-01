@@ -137,6 +137,13 @@ return require('packer').startup(function(use)
 
   -- Show tags in sidebar (lsp only)
   use "stevearc/aerial.nvim"
+
+  -- Show LSP process progress
+  use {
+    "j-hui/fidget.nvim",
+    config = plugconf.fidget,
+  }
+
   -- File tree explorer
   use {
     'scrooloose/nerdtree',

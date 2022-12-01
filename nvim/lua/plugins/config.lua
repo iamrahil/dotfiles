@@ -80,6 +80,11 @@ end
 function config.gitmessenger()
   vim.g.git_messenger_floating_win_opts = { border = 'single' }
 end
+
+function config.fidget()
+  require('fidget').setup{}
+end
+
 return config
 
 -- vim: set ts=2 sw=2 tw=0 et :
