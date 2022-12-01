@@ -104,7 +104,7 @@ return require('packer').startup(function(use)
   use 'unblevable/quick-scope'
 
   -- Open file at given line number eg: nvim init.lua:15
-  use 'bogado/file-line'
+  use { 'bogado/file-line', branch="main" }
 
   -- Window chooser for switching
   use 't9md/vim-choosewin'
