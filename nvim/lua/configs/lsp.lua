@@ -41,6 +41,18 @@ function conf.keymaps(client, bufnr)
   buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
   --buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
 
+  require('aerial').setup({
+      -- use on_attach to set keymaps when aerial has attached to a buffer
+      on_attach = function(bufnr)
+        -- Jump forwards/backwards with '{' and '}'
+        vim.keymap.set('n', '{', '<cmd>AerialPrev<CR>', {buffer = bufnr})
+        vim.keymap.set('n', '}', '<cmd>AerialNext<CR>', {buffer = bufnr})
+      end
+    })
+  require('telescope').load_extension('aerial')
+  buf_set_keymap('n', '<c-Y>', '<cmd>Telescope aerial<CR>', opts)
+  buf_set_keymap('', '<F9>', ':AerialToggle!<CR>', opts)
+
 end
 
 return conf

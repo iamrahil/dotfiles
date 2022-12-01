@@ -135,6 +135,8 @@ return require('packer').startup(function(use)
     cmd = {'TagbarToggle', 'TagbarOpen'}
   }
 
+  -- Show tags in sidebar (lsp only)
+  use "stevearc/aerial.nvim"
   -- File tree explorer
   use {
     'scrooloose/nerdtree',
