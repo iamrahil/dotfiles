@@ -44,9 +44,6 @@ return require('packer').startup(function(use)
   -- Editorconfig plugin
   use 'editorconfig/editorconfig-vim'
 
-  -- HTML abbreviation expansion
-  use { 'mattn/emmet-vim', ft = { 'html' } }
-
   -- Autoclose paranthesis and endwise
   use 'cohama/lexima.vim'
 
