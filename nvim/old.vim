@@ -42,9 +42,6 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 " Trigger a highlight in the appropriate direction when pressing these keys:
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
-" Trigger a highlight only when pressing f and F.
-let g:qs_highlight_on_keys = ['f', 'F']
-
 " Append modeline after last line in buffer.
 " Use substitute() instead of printf() to handle '%%s' modeline in LaTeX
 " files.
