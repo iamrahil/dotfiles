@@ -112,6 +112,12 @@ return require('packer').startup(function(use)
   -- Mappings for commonly used commands
   use 'tpope/vim-unimpaired'
 
+  -- Smooth scrolling
+  use {
+    'declancm/cinnamon.nvim',
+    config = plugconf.cinnamon,
+  }
+
   -------------------------------------
   -- Accessories                     --
   -------------------------------------

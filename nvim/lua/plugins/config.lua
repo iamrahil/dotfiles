@@ -85,6 +85,12 @@ function config.fidget()
   require('fidget').setup{}
 end
 
+function config.cinnamon()
+  require('cinnamon').setup({
+      default_delay = 2
+    })
+end
+
 return config
 
 -- vim: set ts=2 sw=2 tw=0 et :
