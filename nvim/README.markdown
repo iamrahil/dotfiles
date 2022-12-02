@@ -104,3 +104,9 @@ For more info refer [this file](lua/configs/lsp.lua)
 * Leader-tv : Open terminal in vertical split
 * Leader-tx : Open terminal in horizontal split
 * Leader-Esc : Escape from terminal input mode to normal mode
+
+### Tests
+* Leader-rr : Run last test again
+* Leader-rn : Run Nearest tets in file
+* Leader-rf : Run tests of the entire file
+* Leader-rg : Goto the last run test file

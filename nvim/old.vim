@@ -14,6 +14,8 @@ function Transp()
 endfunction
 
 let test#strategy = 'neovim' " for vim-test
+let test#neovim#term_position = "hor below 15"
+let g:test#neovim#start_normal = 1
 
 " Neovim terminal mappings
 tnoremap <Leader><ESC> <C-\><C-n>
