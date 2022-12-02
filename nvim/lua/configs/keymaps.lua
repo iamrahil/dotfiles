@@ -65,7 +65,7 @@ nmap('<leader>tv', ':vsplit | term<CR>', norem)
 nmap('<leader>tx', ':split | term<CR>', norem)
 
 -- Vim-Test Shortcuts
-nmap('<leader>rr', ':TestLast<CR>', norem)
-nmap('<leader>rn', ':TestNearest<CR>', norem)
-nmap('<leader>rf', ':TestFile<CR>', norem)
-nmap('<leader>rg', ':TestVisit<CR>', norem)
+nmap('<leader>sr', ':TestLast<CR>', norem)
+nmap('<leader>sn', ':TestNearest<CR>', norem)
+nmap('<leader>sf', ':TestFile<CR>', norem)
+nmap('<leader>sg', ':TestVisit<CR>', norem)

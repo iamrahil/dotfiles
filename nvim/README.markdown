@@ -106,7 +106,7 @@ For more info refer [this file](lua/configs/lsp.lua)
 * Leader-Esc : Escape from terminal input mode to normal mode
 
 ### Tests
-* Leader-rr : Run last test again
-* Leader-rn : Run Nearest tets in file
-* Leader-rf : Run tests of the entire file
-* Leader-rg : Goto the last run test file
+* Leader-sr : Run last test again
+* Leader-sn : Run Nearest tets in file
+* Leader-sf : Run tests of the entire file
+* Leader-sg : Goto the last run test file
