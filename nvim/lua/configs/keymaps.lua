@@ -60,6 +60,6 @@ nmap('<c-L>', '<cmd>Telescope<CR>', norem)
 nmap('<c-;>', '<cmd>Telescope commands<CR>', norem)
 
 -- Terminal Shortcuts
-nmap('<leader>t', ':tabnew | term<CR>', norem)
-nmap('<leader>v', ':vsplit | term<CR>', norem)
-nmap('<leader>x', ':split | term<CR>', norem)
+nmap('<leader>tt', ':tabnew | term<CR>', norem)
+nmap('<leader>tv', ':vsplit | term<CR>', norem)
+nmap('<leader>tx', ':split | term<CR>', norem)
