@@ -1,3 +1,4 @@
+set completeopt=menu,menuone,noselect
 map <Esc>[B <Down>]
 
 " highlight yanked text for some duration
