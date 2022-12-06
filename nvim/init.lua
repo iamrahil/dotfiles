@@ -20,8 +20,9 @@ opt.magic = true
 opt.smarttab = true
 opt.autoindent = true
 opt.autoread = true
-opt.tabstop = 4
-opt.shiftwidth = 4
+opt.tabstop = 2
+opt.shiftwidth = 2
+opt.expandtab = true
 opt.termguicolors = true   -- True color support
 
 opt.undofile = true
