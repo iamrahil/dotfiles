@@ -101,7 +101,10 @@ return require('packer').startup(function(use)
   use 'easymotion/vim-easymotion'
 
   -- Show indent lines
-  use 'Yggdroot/indentLine'
+  use {
+    "lukas-reineke/indent-blankline.nvim",
+    config = plugconf.indentBlankline,
+  }
 
   -- Expand regions after selection
   use 'terryma/vim-expand-region'

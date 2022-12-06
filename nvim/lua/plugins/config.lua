@@ -150,6 +150,17 @@ function config.cmp()
   })
 end
 
+function config.indentBlankline()
+  require('indent_blankline').setup {
+    --show_current_context = true,
+    --show_current_context_start = true,
+    --use_treesitter = true,
+    char = "¦",
+    char_blankline = "",
+    show_first_indent_level = false
+  }
+end
+
 return config
 
 -- vim: set ts=2 sw=2 tw=0 et :
