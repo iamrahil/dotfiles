@@ -23,6 +23,7 @@ opt.autoread = true
 opt.tabstop = 2
 opt.shiftwidth = 2
 opt.expandtab = true
+opt.scrolloff = 4
 opt.termguicolors = true   -- True color support
 
 opt.undofile = true
