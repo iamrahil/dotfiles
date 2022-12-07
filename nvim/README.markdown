@@ -3,18 +3,16 @@
 The vim config is made for working in Neovim > 0.7
 
 ## Shortcuts
-Although reading through init.lua and lua/configs/keymaps.lua might be enough, some are listed for completeness
+Although reading through [init.lua](init.lua) and [lua/configs/keymaps.lua](lua/configs/keymaps.lua) might be enough, some are listed for completeness
 
 Leader is \
 
 ### General
-* F8: NERDTreeToggle
+* F8: File tree browser toggle
 * F9: TagbarToggle
 * gp: visually select last used block
 * Control-Up/Down: Move lines/block up/down
 * Leader-q: disable highlights
-* Control-ww: Move between windows
-* Control-w[Arrow/hjkl]: Move between windows directionally
 * Leader-ml: Print the modeline at the bottom of the file
 * Leader-ln: Print ruler on the cursor position
 * Leader-nl: Remove the ruler
@@ -38,13 +36,13 @@ Leader is \
 
 ### Buffers/Tabs
 * Leader-b: List all buffers
+> Control-v/x/t to open in verticalsplit/horizontalsplit/tab
+
 * Leader-z: Zoom current buffer to full (Toggle)
-
-> Control-v/s/t to open in verticalsplit/horizontalsplit/tab
-
 * Control-e: Toggle last used buffer
 * Control-PgUp/Dn: Switch between buffers
 * Control-Alt-PgUp/Dn: Switch between tabs
+* Leader-[ / ] : Switch between tabs
 
 ### Comments
 * Leader-ci: toggle comments on line/block
@@ -72,8 +70,9 @@ b1,b2: surrounding types. eg. ' " [] () {}
 ### Multiple Cursors
 * Ctrl-n: Select same word as multiple cursors
 
-
 ### Window Selection
+* Control-ww: Move between windows
+* Control-w[Arrow/hjkl]: Move between windows directionally
 * Leader-w: Select window from open windows
 * <Control-W><Space> : Switch to a popup window
 
