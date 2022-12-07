@@ -44,8 +44,20 @@ return require('packer').startup(function(use)
   -- Editorconfig plugin
   use 'editorconfig/editorconfig-vim'
 
-  -- Autoclose paranthesis and endwise
-  use 'cohama/lexima.vim'
+  -- Autoclose paranthesis
+  use {
+    'windwp/nvim-autopairs',
+    config = plugconf.autopairs,
+  }
+
+  -- Endwise
+  use {
+    'RRethy/nvim-treesitter-endwise',
+    requires = {'nvim-treesitter/nvim-treesitter'},
+    after = 'nvim-treesitter',
+    config = plugconf.endwise,
+    ft = {'ruby', 'lua', 'vim', 'bash', 'sh', 'elixir'}
+  }
 
   -- Detect and autoset sw and et
   use 'tpope/vim-sleuth'

@@ -161,6 +161,18 @@ function config.indentBlankline()
   }
 end
 
+function config.autopairs()
+  require("nvim-autopairs").setup {}
+end
+
+function config.endwise()
+  require('nvim-treesitter.configs').setup {
+    endwise = {
+        enable = true,
+    },
+  }
+end
+
 return config
 
 -- vim: set ts=2 sw=2 tw=0 et :
