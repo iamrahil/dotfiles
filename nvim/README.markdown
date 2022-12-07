@@ -1,26 +1,39 @@
-# VIM config
+# NeoVIM config
 
-The vim config is made for working in Neovim > 0.7
+The neovim config is made for working in Neovim > 0.7
 
 ## Shortcuts
 Although reading through [init.lua](init.lua) and [lua/configs/keymaps.lua](lua/configs/keymaps.lua) might be enough, some are listed for completeness
 
 Leader is \
 
-### General
+### BASICS
 * F8: File tree browser toggle
+* Leader-q: disable highlights (highlights show after you search)
+* Leader-? : Open cheatsheet in telescope (:CheatSheet! to open in popup)
+* Leader-b: List all open buffers in telescope
+* Leader-z: Zoom current buffer to full (Toggle)
+* Control-PgUp/Dn: Switch between buffers
+* Control-Alt-PgUp/Dn: Switch between tabs
+* Leader-ci: toggle comments on line/block
+* Control-w[Arrow/hjkl]: Move between windows directionally
+* Control-p : fuzzy search filenames in telescope
+* Control-ww: Move between windows
+
+More Advanced Options follow
+
+### General
 * F9: TagbarToggle
 * gp: visually select last used block
 * Control-Up/Down: Move lines/block up/down
-* Leader-q: disable highlights
-* Leader-ml: Print the modeline at the bottom of the file
-* Leader-ln: Print ruler on the cursor position
-* Leader-nl: Remove the ruler
-* Leader-? : Open cheatsheet (:CheatSheet! to open in popup)
+* Leader-ml : Print the modeline at the bottom of the file
+* Leader-ln : Print ruler on the cursor position
+* Leader-nl : Remove the ruler
 * Control-l : Open Telescope popup
 * Control-; : Open Telescope popup for commands
 * Control-k : Open Telescope popup for metals (only for scala)
-* Leader-c : Toggle showing context in indent lines
+* Leader-c  : Toggle showing context in indent lines
+* Control-y: fuzzy search tags in telescope
 
 ### Motion
 * Leader-Leader-s[b]: Search for character [b] in both directions
@@ -35,17 +48,11 @@ Leader is \
 * [l : Move to previous lint warning
 
 ### Buffers/Tabs
-* Leader-b: List all buffers
-> Control-v/x/t to open in verticalsplit/horizontalsplit/tab
-
-* Leader-z: Zoom current buffer to full (Toggle)
 * Control-e: Toggle last used buffer
-* Control-PgUp/Dn: Switch between buffers
-* Control-Alt-PgUp/Dn: Switch between tabs
 * Leader-[ / ] : Switch between tabs
 
+
 ### Comments
-* Leader-ci: toggle comments on line/block
 * Leader-cc: comment out line/block (warning! will add multiple comments on existing)
 * Leader-cu: Uncomment as above
 
@@ -57,11 +64,8 @@ b1,b2: surrounding types. eg. ' " [] () {}
 
 * ys[text-object][b1]: wrap the verb block with b1. eg. ysw[, ys$[
 
-### Ctrl-P
-* Control-p: fuzzy search filenames
-* Control-y: fuzzy search tags in files
 
-#### Once open
+### Telescope window
 * Enter: open in current window
 * Control-v: to open in vertical split
 * Control-x: to open in horizontal split
@@ -71,8 +75,6 @@ b1,b2: surrounding types. eg. ' " [] () {}
 * Ctrl-n: Select same word as multiple cursors
 
 ### Window Selection
-* Control-ww: Move between windows
-* Control-w[Arrow/hjkl]: Move between windows directionally
 * Leader-w: Select window from open windows
 * <Control-W><Space> : Switch to a popup window
 
