@@ -69,3 +69,6 @@ nmap('<leader>ss', ':TestLast<CR>', norem)
 nmap('<leader>sn', ':TestNearest<CR>', norem)
 nmap('<leader>sf', ':TestFile<CR>', norem)
 nmap('<leader>sg', ':TestVisit<CR>', norem)
+
+-- Indent Blankline toggle context
+nmap('<leader>c', '<cmd>lua togglecontext()<CR>', norem)

@@ -22,6 +22,7 @@ Leader is \
 * Control-l : Open Telescope popup
 * Control-; : Open Telescope popup for commands
 * Control-k : Open Telescope popup for metals (only for scala)
+* Leader-c : Toggle showing context in indent lines
 
 ### Motion
 * Leader-Leader-s[b]: Search for character [b] in both directions
