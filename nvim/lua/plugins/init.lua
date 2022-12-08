@@ -257,7 +257,7 @@ return require('packer').startup(function(use)
   -------------------------------------
   -- Color Schemes                   --
   -------------------------------------
-  use 'chriskempson/base16-vim'
+  use 'RRethy/nvim-base16'
   use 'KabbAmine/yowish.vim'
   use 'freeo/vim-kalisi'
   use 'marko-cerovac/material.nvim'
