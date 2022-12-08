@@ -25,8 +25,6 @@ return require('packer').startup(function(use)
     run = ':TSUpdate',
     config = plugconf.treesitter,
   }
-  -- Syntax support for muliple languages
-  use 'sheerun/vim-polyglot'
 
   -- Syntax check runnder
   use 'dense-analysis/ale'
