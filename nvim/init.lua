@@ -7,12 +7,6 @@ local HOME = os.getenv('HOME')
 
 require('plugins')
 
-cmd([[
-  set rtp^=/usr/share/vim/vimfiles/
-  set runtimepath+=$GOROOT/misc/vim
-  syntax on
-]])
-
 opt.number = true         -- Show line numbers
 opt.relativenumber = true -- Relative line numbers
 opt.hlsearch = true
@@ -71,12 +65,12 @@ cmd([[
   endtry
 ]])
 
-opt.grepprg = 'grep -nH $*'
-
 g.tex_flavor = "latex"
 
 if (fn.executable('ag') == 1) then
     opt.grepprg = 'ag --nogroup --nocolor'
+  else
+    opt.grepprg = 'grep -nH $*'
 end
 
 --signify: updte git markers when vim gains focus
