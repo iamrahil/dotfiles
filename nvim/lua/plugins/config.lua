@@ -173,6 +173,10 @@ function config.endwise()
   }
 end
 
+function config.lualine()
+  require('lualine').setup()
+end
+
 return config
 
 -- vim: set ts=2 sw=2 tw=0 et :
