@@ -145,7 +145,11 @@ return require('packer').startup(function(use)
   use 'kyazdani42/nvim-web-devicons'
 
   -- Status line and tab line plugin
-  use 'bling/vim-airline'
+  --use 'bling/vim-airline'
+  use {
+    'feline-nvim/feline.nvim',
+    config = plugconf.feline,
+  }
 
   -- File tree explorer
   use {

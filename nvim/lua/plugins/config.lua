@@ -173,6 +173,11 @@ function config.endwise()
   }
 end
 
+function config.feline()
+  require('feline').setup()
+  require('feline').winbar.setup()
+end
+
 return config
 
 -- vim: set ts=2 sw=2 tw=0 et :
