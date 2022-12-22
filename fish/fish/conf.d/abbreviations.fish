@@ -25,6 +25,7 @@ abbr -a -U -- grc 'git rebase --continue'
 abbr -a -U -- grh 'git reset HEAD'
 abbr -a -U -- grhh 'git reset --hard'
 abbr -a -U -- grpe grep
+abbr -a -U -- grt 'cd (git rev-parse --show-toplevel || echo .)'
 abbr -a -U -- gst 'git status'
 abbr -a -U -- gsta 'git stash'
 abbr -a -U -- kick 'sudo systemctl'
