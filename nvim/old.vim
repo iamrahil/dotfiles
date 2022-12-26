@@ -5,6 +5,11 @@ map <Esc>[B <Down>]
 au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=250}
 " let g:NERDTreeDirArrows=0
 
+augroup autoread-file
+  au!
+  au CursorHold * silent! checktime
+augroup END
+
 "Functions
 function Opaq()
   colorscheme yowish
