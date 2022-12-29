@@ -177,6 +177,26 @@ function config.lualine()
   require('lualine').setup()
 end
 
+function config.tabby()
+  local util = require('tabby.util')
+  local ltheme = {
+    fill = util.extract_nvim_hl('lualine_b_normal'),
+    tabline = util.extract_nvim_hl('lualine_c_normal'),
+    tabline_sel = util.extract_nvim_hl('lualine_a_normal'),
+  }
+  require('tabby.tabline').use_preset('active_wins_at_tail', {
+    theme = {
+      fill = ltheme.fill, -- tabline background
+      head = ltheme.tabline, -- head element highlight
+      current_tab = ltheme.tabline_sel, -- current tab label highlight
+      tab = ltheme.tabline, -- other tab label highlight
+      win = ltheme.tabline, -- window highlight
+      tail = ltheme.tabline, -- tail element highlight
+    },
+    nerdfont = true, -- whether use nerdfont
+  })
+  end
+
 return config
 
 -- vim: set ts=2 sw=2 tw=0 et :

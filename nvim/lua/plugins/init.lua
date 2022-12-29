@@ -151,6 +151,12 @@ return require('packer').startup(function(use)
     config = plugconf.lualine,
   }
 
+  use {
+    'nanozuki/tabby.nvim',
+    after = { 'material.nvim', 'lualine.nvim' },
+    config = plugconf.tabby,
+  }
+
   -- File tree explorer
   use {
     'kyazdani42/nvim-tree.lua',
