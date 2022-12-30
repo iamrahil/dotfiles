@@ -112,3 +112,12 @@ For more info refer [this file](lua/configs/lsp.lua)
 * Leader-sn : Run Nearest tets in file
 * Leader-sf : Run tests of the entire file
 * Leader-sg : Goto the last run test file
+
+### Useful Unimpaired Shortcuts
+
+* yoc : Toggle cursorline (highlight line)
+* you : Toggle colorcolumn (highlit column)
+* yox : Toggle both (crosshair highlight, combination of above)
+* yow : Toggle wrap
+* yon : Toggle line numbers
+* yor : Toggle relative line numbers
