@@ -1,0 +1,35 @@
+#!/bin/bash
+
+set -xe
+rootPath="$VID_DIR"
+if [[ "$#" -eq 0 ]]; then
+  input=$(kdialog --inputbox Paths)
+  IFS=";" read -ra in_split <<< "$input"
+  path="${in_split[0]}"
+  query="${in_split[1]}"
+else
+  path=$1
+  query=$2
+fi
+
+path=${path:-$rootPath}
+query=${query:-.}
+
+process_path() {
+  IFS="," read -ra splits <<< "$path"
+  for i in "${!splits[@]}"; do
+    echo "$i"
+    dir=${splits[$i]}
+    echo "$dir"
+    if [[ ! -d $dir ]]; then
+      splits[i]="$rootPath/$dir"
+    fi
+  done
+}
+
+process_path
+file=$(mktemp -p /tmp XXXX.m3u)
+#find $VID_DIR -not -name 'in.m3u' -type f -exec ls -l --time-style="+%s" {} \; | sort -rn -k6 | cut -d' ' -f7- > "$file"
+fd "$query" -a -E dump -tf "${splits[@]}" -X ls -t > "$file"
+mpv --mute=yes --loop-playlist --fs "$file"
+rm "$file"
