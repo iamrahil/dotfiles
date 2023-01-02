@@ -6,4 +6,6 @@ bash tmux/install.sh
 
 bash zsh/install.sh
 
+bash bin/install.sh
+
 zsh -l

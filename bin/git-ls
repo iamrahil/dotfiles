@@ -1,0 +1,9 @@
+#!/bin/bash
+COLS=$(tput cols)
+shortWidth=$((COLS/3))
+dateWidth=$((COLS/3))
+
+for fl in $(ls -a | grep -v '\.\.' | grep -v '\.git$');
+do
+	echo "$fl|" $(git -c color.ui=always log -1 --pretty="format:%Cred%<($shortWidth,trunc)%s%Creset %<($dateWidth,trunc)| %Cgreen%cr%Creset" "$fl");
+done | column -t -s'|'
