@@ -175,6 +175,7 @@ end
 
 function config.lualine()
   require('lualine').setup {
+    extensions = {'nvim-tree', 'quickfix', 'aerial'},
     winbar = {
       lualine_c = {'filename'},
     },
