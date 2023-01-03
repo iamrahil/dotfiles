@@ -83,7 +83,7 @@ return require('packer').startup(function(use)
   -- Scala integration
   use {
     'scalameta/nvim-metals',
-    after = 'telescope.nvim',
+    after = 'goto-preview',
   }
 
   -- Scratch buffer for lua
@@ -92,10 +92,15 @@ return require('packer').startup(function(use)
   -- Lsp config manager
   use {
     'neovim/nvim-lspconfig',
-    after = 'telescope.nvim',
+    after = 'goto-preview',
     config = plugconf.lspconfig
   }
 
+  use {
+    'rmagatti/goto-preview',
+    after = { 'telescope.nvim'},
+    opt = true
+  }
 
   -------------------------------------
   -- Navigation                      --

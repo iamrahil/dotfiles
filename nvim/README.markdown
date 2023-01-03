@@ -100,6 +100,10 @@ For more info refer [this file](lua/configs/lsp.lua)
 * Leader-f : Format the current buffer for lint
 * [d : Jump to prev code issue
 * ]d : Jump to next code issue
+* gpd : Preview definition
+* gpi : Preview implementation
+* gpr : Preview references
+* gpq : Close all previews
 
 ### Terminal
 * Leader-tt : Open terminal in new tab

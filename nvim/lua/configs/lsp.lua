@@ -53,8 +53,14 @@ function conf.keymaps(client, bufnr)
   buf_set_keymap('n', '<c-Y>', '<cmd>Telescope aerial<CR>', opts)
   buf_set_keymap('', '<F9>', ':AerialToggle!<CR>', opts)
   vim.lsp.handlers["textDocument/references"] = require("telescope.builtin").lsp_references
+  require('goto-preview').setup {}
+  buf_set_keymap('n', 'gpd', '<Cmd>lua require("goto-preview").goto_preview_definition()<CR>', opts)
+  buf_set_keymap('n', 'gpi', '<Cmd>lua require("goto-preview").goto_preview_implementation()<CR>', opts)
+  buf_set_keymap('n', 'gpr', '<Cmd>lua require("goto-preview").goto_preview_references()()<CR>', opts)
+  buf_set_keymap('n', 'gpq', '<Cmd>lua require("goto-preview").close_all_win()<CR>', opts)
 end
 
+-- Anything for only lspconfig loading goes here around keymaps
 function conf.loadlspconfig(client, bufnr)
   conf.keymaps(client, bufnr)
 end
