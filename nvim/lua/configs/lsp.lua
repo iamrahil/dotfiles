@@ -52,7 +52,11 @@ function conf.keymaps(client, bufnr)
   require('telescope').load_extension('aerial')
   buf_set_keymap('n', '<c-Y>', '<cmd>Telescope aerial<CR>', opts)
   buf_set_keymap('', '<F9>', ':AerialToggle!<CR>', opts)
+  vim.lsp.handlers["textDocument/references"] = require("telescope.builtin").lsp_references
+end
 
+function conf.loadlspconfig(client, bufnr)
+  conf.keymaps(client, bufnr)
 end
 
 return conf

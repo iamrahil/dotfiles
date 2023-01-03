@@ -81,13 +81,20 @@ return require('packer').startup(function(use)
   use { 'benjie/local-npm-bin.vim', ft = {'javascript'} }
 
   -- Scala integration
-  use 'scalameta/nvim-metals'
+  use {
+    'scalameta/nvim-metals',
+    after = 'telescope.nvim',
+  }
 
   -- Scratch buffer for lua
   use 'rafcamlet/nvim-luapad'
 
   -- Lsp config manager
-  use { 'neovim/nvim-lspconfig', config = plugconf.lspconfig }
+  use {
+    'neovim/nvim-lspconfig',
+    after = 'telescope.nvim',
+    config = plugconf.lspconfig
+  }
 
 
   -------------------------------------

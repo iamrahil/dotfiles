@@ -71,7 +71,7 @@ function config.lspconfig()
   for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup {
       capabilities = capabilities,
-      on_attach = lspconf.keymaps,
+      on_attach = lspconf.loadlspconfig,
       flags = {
         debounce_text_changes = 150,
       }
