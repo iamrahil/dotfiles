@@ -174,7 +174,14 @@ function config.endwise()
 end
 
 function config.lualine()
-  require('lualine').setup()
+  require('lualine').setup {
+    winbar = {
+      lualine_c = {'filename'},
+    },
+    inactive_winbar = {
+      lualine_c = {'filename'},
+    }
+  }
 end
 
 function config.tabby()
