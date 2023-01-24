@@ -74,9 +74,10 @@ b1,b2: surrounding types. eg. ' " [] () {}
 ### Multiple Cursors
 * Ctrl-n: Select same word as multiple cursors
 
-### Window Selection
+### Window Selection/Movements
 * Leader-w: Select window from open windows
 * <Control-W><Space> : Switch to a popup window
+* <Control-W>H/J/K/L : Move current window to Left/Down/Up/Right
 
 ### GIT Workflows
 
