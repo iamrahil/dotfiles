@@ -1,0 +1,42 @@
+#!/bin/env python3
+import os
+from os import path
+from pathlib import Path
+from datetime import datetime
+
+import argparse
+from photocollage import gtkgui,render,collage
+from photocollage.render import PIL_SUPPORTED_EXTS as EXTS
+
+parser = argparse.ArgumentParser()
+parser.add_argument('path', default="i")
+parser.add_argument('-f', '--filter', required=False)
+args = parser.parse_args()
+
+root_dir = Path(os.environ["VID_DIR"], "dump")
+query_dir = Path(root_dir, args.path)
+
+extensions = [f'.{x}' for v in EXTS.RW.values() for x in v]
+
+filter = f'*{args.filter}*' if args.filter else '*'
+
+files = [p for p in query_dir.glob(filter) if p.suffix in extensions]
+
+fss = render.build_photolist(files)
+uc = gtkgui.UserCollage(fss)
+scale = min(len(files)/30,10)
+
+class Options:
+  def __init__(self):
+    self.border_w = 0.01
+    self.border_c = "black"
+    self.out_w = 2560*scale
+    self.out_h = 1440*scale
+
+opts = Options()
+uc.make_page(opts)
+uc.page.scale_to_fit(opts.out_w, opts.out_h)
+output=Path(root_dir, f'{query_dir.name}_{datetime.now()}.png'.replace(' ', '_'))
+print(output)
+t = render.RenderingTask(uc.page, output_file=output)
+t.run()
