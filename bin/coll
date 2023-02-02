@@ -21,16 +21,17 @@ def get_files(path, filter):
 
 def out_name(paths):
     prefix = hashlib.md5(paths.encode('utf-8')).hexdigest()
-    return f'{prefix}_{datetime.now()}.png'.replace(' ', '_')
+    return f'{prefix}_{datetime.now()}.png'.replace(' ', '_').replace(':', '_')
 
 
-def generate_collage(files, scale):
+def generate_collage(files, scale, vertical=False):
+    (base_w, base_h) = (1440, 3120) if vertical else (2560, 1440)
     class Options:
         def __init__(self):
             self.border_w = 0.01
             self.border_c = "black"
-            self.out_w = int(2560*scale)
-            self.out_h = int(1440*scale)
+            self.out_w = int(base_w*scale)
+            self.out_h = int(base_h*scale)
 
     fss = render.build_photolist(files)
     uc = gtkgui.UserCollage(fss)
@@ -51,13 +52,16 @@ parser = argparse.ArgumentParser()
 parser.add_argument('paths', default="i")
 parser.add_argument('-f', '--filter', required=False)
 parser.add_argument('-d', '--filter-directory', required=False)
-parser.add_argument('-s', '--max-scale', required=False, default=10, type=float)
+parser.add_argument('-s', '--max-scale', required=False,
+                    default=10, type=float)
+parser.add_argument('-v', '--vertical', required=False, action='store_true')
 args = parser.parse_args()
 
 paths_input = args.paths
 filter = args.filter
 filter_directory = args.filter_directory
 max_scale = args.max_scale
+vertical = args.vertical
 
 root_dir = Path(os.environ["VID_DIR"], "dump")
 paths = [d for d in Path(root_dir, paths_input).glob(
@@ -71,6 +75,6 @@ if len(files) == 0:
 
 print(f'Processing {len(files)} files')
 scale = max(min(len(files)/30, max_scale), 1)
-collage = generate_collage(files, scale)
+collage = generate_collage(files, scale, vertical)
 output = Path(root_dir, out_name(paths_input))
 save_collage(collage, output)
