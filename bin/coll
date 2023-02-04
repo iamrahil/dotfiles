@@ -1,12 +1,12 @@
 #!/bin/env python3
 import os
-from os import path
 from pathlib import Path
 from datetime import datetime
 import hashlib
+from random import randrange
 
 import argparse
-from photocollage import gtkgui, render, collage
+from photocollage import gtkgui, render
 from photocollage.render import PIL_SUPPORTED_EXTS as EXTS
 
 EXTENSIONS = [f'.{x}' for v in EXTS.RW.values() for x in v]
@@ -19,13 +19,15 @@ def get_files(path, filter):
     return files
 
 
-def out_name(paths):
+def out_name(paths, index=0):
     prefix = hashlib.md5(paths.encode('utf-8')).hexdigest()
-    return f'{prefix}_{datetime.now()}.png'.replace(' ', '_').replace(':', '_')
+    return f'{prefix}_{datetime.now()}_{index}.png'.replace(' ', '_').replace(
+            ':', '_')
 
 
 def generate_collage(files, scale, vertical=False):
     (base_w, base_h) = (1440, 3120) if vertical else (2560, 1440)
+
     class Options:
         def __init__(self):
             self.border_w = 0.01
@@ -36,7 +38,7 @@ def generate_collage(files, scale, vertical=False):
     fss = render.build_photolist(files)
     uc = gtkgui.UserCollage(fss)
     opts = Options()
-    print(f'Output resolution: {opts.out_w}x{opts.out_h}')
+    print(f'Output resolution: {opts.out_w}x{opts.out_h} for: {len(files)}')
     uc.make_page(opts)
     uc.page.scale_to_fit(opts.out_w, opts.out_h)
     return uc
@@ -48,6 +50,20 @@ def save_collage(collage, path):
     print(output)
 
 
+def split_files(files, size):
+    splits = []
+    while len(files) > 0:
+        splits.append([files.pop(randrange(len(files))) for i in range(
+            size) if len(files) > 0])
+    return splits
+
+
+def process_files(files, vertical):
+    scale = max(min(len(files)/30, max_scale), 1)
+    coll = generate_collage(files, scale, vertical)
+    return coll
+
+
 parser = argparse.ArgumentParser()
 parser.add_argument('paths', default="i")
 parser.add_argument('-f', '--filter', required=False)
@@ -55,6 +71,8 @@ parser.add_argument('-d', '--filter-directory', required=False)
 parser.add_argument('-s', '--max-scale', required=False,
                     default=10, type=float)
 parser.add_argument('-v', '--vertical', required=False, action='store_true')
+parser.add_argument('-n', '--number', required=False,
+                    default=10, type=int)
 args = parser.parse_args()
 
 paths_input = args.paths
@@ -62,19 +80,25 @@ filter = args.filter
 filter_directory = args.filter_directory
 max_scale = args.max_scale
 vertical = args.vertical
+size = args.number
 
 root_dir = Path(os.environ["VID_DIR"], "dump")
 paths = [d for d in Path(root_dir, paths_input).glob(
-    f'*{filter_directory}*') if d.is_dir()] if filter_directory else paths_input.split(',')
+    f'*{filter_directory}*') if d.is_dir()
+] if filter_directory else paths_input.split(',')
 files = [file for path in paths for file in get_files(
     Path(root_dir, path), filter)]
 
-if len(files) == 0:
+total_files = len(files)
+if total_files == 0:
     print(f'No files found at {paths_input}')
     quit()
 
-print(f'Processing {len(files)} files')
-scale = max(min(len(files)/30, max_scale), 1)
-collage = generate_collage(files, scale, vertical)
-output = Path(root_dir, out_name(paths_input))
-save_collage(collage, output)
+splits = split_files(files, size)
+print(f'Processing {total_files} files in {len(splits)} parts')
+
+collages = [process_files(i, vertical) for i in splits]
+
+for n in range(len(collages)):
+    output = Path(root_dir, out_name(paths_input, n))
+    save_collage(collages[n], output)
