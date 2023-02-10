@@ -203,7 +203,11 @@ function config.tabby()
     },
     nerdfont = true, -- whether use nerdfont
   })
-  end
+end
+
+function config.glow()
+  require('glow').setup()
+end
 
 return config
 

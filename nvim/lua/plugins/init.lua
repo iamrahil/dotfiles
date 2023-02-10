@@ -241,6 +241,7 @@ return require('packer').startup(function(use)
     "ellisonleao/glow.nvim",
     ft = {'markdown'},
     opt = true,
+    config = plugconf.glow,
     cmd = 'Glow'
   }
 
