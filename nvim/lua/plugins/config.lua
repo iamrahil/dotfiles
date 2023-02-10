@@ -66,7 +66,7 @@ function config.lspconfig()
   -- map buffer local keybindings when the language server attaches
   local nvim_lsp = require('lspconfig')
   local lspconf = require('configs.lsp')
-  local servers = { "solargraph" }
+  local servers = vim.g["custom#lspservers"]
   local capabilities = require('cmp_nvim_lsp').default_capabilities()
   for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup {

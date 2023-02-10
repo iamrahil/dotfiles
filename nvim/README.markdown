@@ -2,6 +2,11 @@
 
 The neovim config is made for working in Neovim > 0.7
 
+## SETUP
+- Need to run `bash install.sh`
+- To enable lsp servers. Add variables `g:custom#lspservers = [ 'listofservers' ]` somewhere in `custom.vim` or `lua/custom/init.lua`
+> Eg: to enable solargraph and pyls, `g:custom#lspservers = ['solargraph', 'pyls']`
+
 ## Shortcuts
 Although reading through [init.lua](init.lua) and [lua/configs/keymaps.lua](lua/configs/keymaps.lua) might be enough, some are listed for completeness
 
