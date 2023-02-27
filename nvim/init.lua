@@ -39,6 +39,8 @@ opt.foldenable = false    -- Stop from folding at load
 opt.inccommand = 'nosplit' -- Live substitute preview
 opt.incsearch = true
 
+opt.laststatus = 3 -- Common statusbas for all window buffers
+
 opt.wildignore:append {
   '*/tmp/*',
   '*.so',
