@@ -10,3 +10,18 @@ function togglecontext()
     context_char = '┆'
   }
 end
+
+function popmenu(prepend)
+  vim.cmd([[aunmenu PopUp]])
+  vim.cmd(prepend)
+  vim.cmd([[
+    vnoremenu PopUp.Cut                         "+x
+    vnoremenu PopUp.Copy                        "+y
+    anoremenu PopUp.Paste                       "+gP
+    vnoremenu PopUp.Paste                       "+P
+    vnoremenu PopUp.Delete                      "_x
+    nnoremenu PopUp.Select\ All                 ggVG
+    vnoremenu PopUp.Select\ All                 gg0oG$
+    inoremenu PopUp.Select\ All                 <C-Home><C-O>VG
+  ]])
+end

@@ -61,8 +61,8 @@ end
 -- Set colorscheme
 cmd([[
   try
-    let g:material_style = "darker"
-    colorscheme material
+    let g:material_style = "deep ocean"
+    colorscheme base16-ayu-mirage
     catch
   endtry
 ]])
@@ -85,7 +85,6 @@ cmd([[
   endif
 ]])
 require('configs')
-
 
 local nvim_metals_group = vim.api.nvim_create_augroup("nvim-metals", { clear = true })
 vim.api.nvim_create_autocmd("FileType", {
