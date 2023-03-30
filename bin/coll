@@ -4,6 +4,7 @@ from pathlib import Path
 from datetime import datetime
 import hashlib
 from random import randrange
+import re
 
 import argparse
 from photocollage import gtkgui, render
@@ -19,14 +20,33 @@ def get_files(path, filter):
     return files
 
 
+def parse_aspect(aspect):
+    ex = re.compile("^[0-9]*x[0-9]*$")
+    if ex.match(aspect):
+        return tuple(map(int, aspect.split("x")))
+    else:
+        raise ValueError("Aspect format is 9999x9999")
+
+
+def calculate_aspect(aspect):
+    aspect_size = {
+            "uqhd": (3440, 1440),
+            "v": (1440, 3120),
+            "wqhd": (2560, 1440),
+            "fhd": (1920, 1080),
+            "hd": (1280, 720)
+            }
+    return aspect_size.get(aspect) or parse_aspect(aspect)
+
+
 def out_name(paths, index=0):
     prefix = hashlib.md5(paths.encode('utf-8')).hexdigest()
     return f'{prefix}_{datetime.now()}_{index}.png'.replace(' ', '_').replace(
             ':', '_')
 
 
-def generate_collage(files, scale, vertical=False):
-    (base_w, base_h) = (1440, 3120) if vertical else (2560, 1440)
+def generate_collage(files, scale, aspect_ratio):
+    (base_w, base_h) = aspect_ratio
 
     class Options:
         def __init__(self):
@@ -58,9 +78,9 @@ def split_files(files, size):
     return splits
 
 
-def process_files(files, vertical):
+def process_files(files, aspect_ratio):
     scale = max(min(len(files)/30, max_scale), 1)
-    coll = generate_collage(files, scale, vertical)
+    coll = generate_collage(files, scale, aspect_ratio)
     return coll
 
 
@@ -70,7 +90,7 @@ parser.add_argument('-f', '--filter', required=False)
 parser.add_argument('-d', '--filter-directory', required=False)
 parser.add_argument('-s', '--max-scale', required=False,
                     default=10, type=float)
-parser.add_argument('-v', '--vertical', required=False, action='store_true')
+parser.add_argument('-a', '--aspect', required=False, default="wqhd")
 parser.add_argument('-n', '--number', required=False,
                     default=10, type=int)
 args = parser.parse_args()
@@ -79,7 +99,7 @@ paths_input = args.paths
 filter = args.filter
 filter_directory = args.filter_directory
 max_scale = args.max_scale
-vertical = args.vertical
+aspect = args.aspect
 size = args.number
 
 root_dir = Path(os.environ["VID_DIR"], "dump")
@@ -97,7 +117,9 @@ if total_files == 0:
 splits = split_files(files, size)
 print(f'Processing {total_files} files in {len(splits)} parts')
 
-collages = [process_files(i, vertical) for i in splits]
+aspect_ratio = calculate_aspect(aspect)
+
+collages = [process_files(i, aspect_ratio) for i in splits]
 
 for n in range(len(collages)):
     output = Path(root_dir, out_name(paths_input, n))
