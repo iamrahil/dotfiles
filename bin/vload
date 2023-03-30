@@ -30,6 +30,6 @@ process_path() {
 process_path
 file=$(mktemp -p /tmp XXXX.m3u)
 #find $VID_DIR -not -name 'in.m3u' -type f -exec ls -l --time-style="+%s" {} \; | sort -rn -k6 | cut -d' ' -f7- > "$file"
-fd "$query" -a -E dump -tf "${splits[@]}" -X ls -t > "$file"
+fd "$query" -a -E dump -tf "${splits[@]}" -H -X ls -t > "$file"
 mpv --mute=yes --loop-playlist --fs "$file"
 rm "$file"
