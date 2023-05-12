@@ -21,7 +21,7 @@ process_path() {
     echo "$i"
     dir=${splits[$i]}
     echo "$dir"
-    if [[ ! -d $dir ]]; then
+    if [[ ! -d "$dir" ]]; then
       splits[i]="$rootPath/$dir"
     fi
   done
