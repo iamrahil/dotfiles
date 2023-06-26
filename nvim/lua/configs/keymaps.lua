@@ -23,7 +23,8 @@ end
 
 -- KEYBINDINGS
 
-map('<F8>', ':NvimTreeToggle<cr>', {})
+map('<F8>', ':NvimTreeFindFileToggle<cr>', {})
+map('<F20>', ':NvimTreeToggle<cr>', {}) -- Shitf+<F8>
 map('<F9>', ':TagbarToggle<cr>', {})
 
 nmap('gp', '`[v`]', norem)
