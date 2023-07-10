@@ -54,11 +54,16 @@ nmap(']e', ':lnext<CR>', norem)
 nmap('[e', ':lprevious<CR>', norem)
 
 -- Telescope
-nmap('<c-P>', '<cmd>Telescope find_files<CR>', norem)
+nmap('<c-P>', '<cmd>Telescope menufacture find_files<CR>', norem)
 nmap('<c-Y>', '<cmd>Telescope tags<CR>', norem)
 nmap('<leader>b', '<cmd>Telescope buffers<CR>', norem)
 nmap('<c-L>', '<cmd>Telescope<CR>', norem)
 nmap('<c-;>', '<cmd>Telescope commands<CR>', norem)
+
+-- Search
+nmap('<leader>gf', '<cmd>Telescope menufacture find_files<CR>', norem)
+nmap('<leader>gg', '<cmd>Telescope menufacture grep_string<CR>', norem)
+nmap('<leader>gl', '<cmd>Telescope menufacture live_grep<CR>', norem)
 
 -- Terminal Shortcuts
 nmap('<leader>tt', ':tabnew | term<CR>', norem)

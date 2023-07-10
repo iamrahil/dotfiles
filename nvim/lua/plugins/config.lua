@@ -209,6 +209,10 @@ function config.glow()
   require('glow').setup()
 end
 
+function config.menufacture()
+  require('telescope').load_extension 'menufacture'
+end
+
 return config
 
 -- vim: set ts=2 sw=2 tw=0 et :

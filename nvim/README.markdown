@@ -58,6 +58,13 @@ More Advanced Options follow
 * Control-e: Toggle last used buffer
 * Leader-[ / ] : Switch between tabs
 
+### Search
+> Filters can be added by Control-6 on the popup menu
+
+* Leader-gf : Find files in workspace
+* Leader-gg : grep string under cursor
+* Leader-gl : live grep in workspace
+
 
 ### Comments
 * Leader-cc: comment out line/block (warning! will add multiple comments on existing)

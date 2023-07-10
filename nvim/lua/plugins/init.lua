@@ -116,6 +116,13 @@ return require('packer').startup(function(use)
     module = 'telescope',
   }
 
+  use {
+    'molecule-man/telescope-menufacture',
+    after = { 'telescope.nvim'},
+    requires = {'nvim-telescope/telescope.nvim'},
+    config = plugconf.menufacture,
+  }
+
   -- Use multiple cursors
   use 'terryma/vim-multiple-cursors'
 
