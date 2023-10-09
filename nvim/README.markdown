@@ -38,7 +38,6 @@ More Advanced Options follow
 * Control-l : Open Telescope popup
 * Control-; : Open Telescope popup for commands
 * Control-k : Open Telescope popup for metals (only for scala)
-* Leader-c  : Toggle showing context in indent lines
 * Control-y: fuzzy search tags in telescope
 * Leader-cfn : Copy filename:linenumber:column to the clipboard
 

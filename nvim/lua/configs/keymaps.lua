@@ -76,8 +76,5 @@ nmap('<leader>sn', ':TestNearest<CR>', norem)
 nmap('<leader>sf', ':TestFile<CR>', norem)
 nmap('<leader>sg', ':TestVisit<CR>', norem)
 
--- Indent Blankline toggle context
-nmap('<leader>c', '<cmd>lua togglecontext()<CR>', norem)
-
 -- Copy filename:linenumber:column to system clipbaord
 nmap('<leader>cfn', ':let @+=expand("%").":".line(".").":".col(".")<CR>', norem)
