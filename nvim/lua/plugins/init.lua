@@ -123,6 +123,14 @@ return require('packer').startup(function(use)
     config = plugconf.menufacture,
   }
 
+  -- Telescope tab switcher
+  use {
+    'LukasPietzschmann/telescope-tabs',
+    after = { 'telescope.nvim'},
+    requires = { 'nvim-telescope/telescope.nvim' },
+    config = plugconf.telescopetabs
+  }
+
   -- Use multiple cursors
   use 'terryma/vim-multiple-cursors'
 

@@ -56,6 +56,8 @@ More Advanced Options follow
 ### Buffers/Tabs
 * Control-e: Toggle last used buffer
 * Leader-[ / ] : Switch between tabs
+* Leader-lt: List open tabs
+* Leader-Tab: Jump to previous tab
 
 ### Search
 > Filters can be added by Control-6 on the popup menu

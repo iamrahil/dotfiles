@@ -45,6 +45,8 @@ nmap('<C-PageDown>', ':bprev<CR>', {})
 -- Tabs Navigation
 nmap('<leader>]', ':tabnext<CR>', {})
 nmap('<leader>[', ':tabprev<CR>', {})
+nmap('<leader>lt', ':Telescope telescope-tabs list_tabs<CR>', {})
+nmap('<leader><tab>', '<cmd>lua require("telescope-tabs").go_to_previous()<CR>', norem)
 
 -- Toggle Highlights
 map('<leader>q', ':noh<CR>', {})
