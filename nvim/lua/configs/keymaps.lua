@@ -58,7 +58,8 @@ nmap('[e', ':lprevious<CR>', norem)
 -- Telescope
 nmap('<c-P>', '<cmd>Telescope menufacture find_files<CR>', norem)
 nmap('<c-Y>', '<cmd>Telescope tags<CR>', norem)
-nmap('<leader>b', '<cmd>Telescope buffers<CR>', norem)
+nmap('<leader>b', '<cmd>echo <leader>lb instead<CR>', norem) -- deprecated; to be removed
+nmap('<leader>lb', '<cmd>Telescope buffers<CR>', norem)
 nmap('<c-L>', '<cmd>Telescope<CR>', norem)
 nmap('<c-;>', '<cmd>Telescope commands<CR>', norem)
 

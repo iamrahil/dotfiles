@@ -17,7 +17,7 @@ Leader is \
 * Shift-F8: File tree browser toggle. Opens to working dir
 * Leader-q: disable highlights (highlights show after you search)
 * Leader-? : Open cheatsheet in telescope (:CheatSheet! to open in popup)
-* Leader-b: List all open buffers in telescope
+* Leader-lb: List all open buffers in telescope
 * Leader-z: Zoom current buffer to full (Toggle)
 * Control-PgUp/Dn: Switch between buffers
 * Control-Alt-PgUp/Dn: Switch between tabs
