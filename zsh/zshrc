@@ -1,3 +1,4 @@
+source ~/.zshrc.before
 source ~/.zplug/init.zsh
 
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
@@ -36,3 +37,5 @@ export PATH="$PATH:$HOME/.rvm/bin"
 if $(command -v pyenv &>/dev/null); then
     eval "$(pyenv init -)"
 fi
+
+source ~/.zshrc.after
