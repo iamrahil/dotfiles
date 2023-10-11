@@ -1,6 +1,7 @@
 package bass
 package foreign-env
 package grc
+package https://github.com/PatrickF1/fzf.fish
 package nvm
 package pyenv
 package rvm
