@@ -61,8 +61,7 @@ end
 -- Set colorscheme
 cmd([[
   try
-    let g:material_style = "darker"
-    colorscheme material
+    colorscheme base16-ayu-mirage
     catch
   endtry
 ]])
