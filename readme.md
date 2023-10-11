@@ -14,6 +14,8 @@
 
 ## For FISH
 1. grc
+2. fd-find
+3. bat
 
 ## For Neovim
 1. python-neovim / python-pynvim
