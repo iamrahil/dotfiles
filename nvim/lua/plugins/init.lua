@@ -169,12 +169,12 @@ return require('packer').startup(function(use)
   -------------------------------------
 
   -- Support for patched fonts (nerdfonts.com)
-  use 'kyazdani42/nvim-web-devicons'
+  use 'nvim-tree/nvim-web-devicons'
 
   -- Status line and tab line plugin
   use {
     'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true },
     config = plugconf.lualine,
   }
 
