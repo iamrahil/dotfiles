@@ -290,6 +290,20 @@ return require('packer').startup(function(use)
   -- Show blame commit in popup
   use { 'rhysd/git-messenger.vim', config = plugconf.gitmessenger }
 
+  -- Github CLI Integration
+  use {
+    'pwntester/octo.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim',
+      'nvim-telescope/telescope.nvim',
+      'nvim-tree/nvim-web-devicons',
+    },
+    opt = true,
+    cmd = 'Octo',
+    after = { 'telescope.nvim' },
+    config = plugconf.octo,
+  }
+
 
   -------------------------------------
   -- Color Schemes                   --

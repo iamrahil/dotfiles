@@ -215,6 +215,10 @@ function config.telescopetabs()
   require'telescope-tabs'.setup{}
 end
 
+function config.octo()
+  require'octo'.setup{}
+end
+
 return config
 
 -- vim: set ts=2 sw=2 tw=0 et :
