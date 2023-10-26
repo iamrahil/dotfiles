@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# vload <paths> <query>
+# vload -> kdialog -> <paths>;query
 set -xe
 rootPath="$VID_DIR"
 if [[ "$#" -eq 0 ]]; then
