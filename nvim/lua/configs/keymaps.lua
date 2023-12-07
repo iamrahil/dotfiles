@@ -79,5 +79,10 @@ nmap('<leader>sn', ':TestNearest<CR>', norem)
 nmap('<leader>sf', ':TestFile<CR>', norem)
 nmap('<leader>sg', ':TestVisit<CR>', norem)
 
+-- Copy filename to system clipboard
+nmap('<leader>cff', ':let @+=expand("%")<CR>', norem)
+-- Copy filename:linenumber to system clipboard
+nmap('<leader>cfl', ':let @+=expand("%").":".line(".")<CR>', norem)
 -- Copy filename:linenumber:column to system clipbaord
-nmap('<leader>cfn', ':let @+=expand("%").":".line(".").":".col(".")<CR>', norem)
+nmap('<leader>cfc', ':let @+=expand("%").":".line(".").":".col(".")<CR>', norem)
+nmap('<leader>cfn', '<cmd>echo <leader>cfc instead<CR>', norem) -- deprecated; to be removed

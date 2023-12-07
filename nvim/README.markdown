@@ -39,7 +39,9 @@ More Advanced Options follow
 * Control-; : Open Telescope popup for commands
 * Control-k : Open Telescope popup for metals (only for scala)
 * Control-y: fuzzy search tags in telescope
-* Leader-cfn : Copy filename:linenumber:column to the clipboard
+* Leader-cff : Copy filename to the clipboard
+* Leader-cfl : Copy filename:linenumber to the clipboard
+* Leader-cfc : Copy filename:linenumber:column to the clipboard
 
 ### Motion
 * Leader-Leader-s[b]: Search for character [b] in both directions
