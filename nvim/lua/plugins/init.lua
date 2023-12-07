@@ -31,8 +31,15 @@ return require('packer').startup(function(use)
   use 'dense-analysis/ale'
 
   -- Snippet libraries
-  use 'SirVer/ultisnips'
-  use 'honza/vim-snippets'
+  use {
+    "L3MON4D3/LuaSnip",
+    -- follow latest release.
+    tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+    -- install jsregexp (optional!:).
+    run = "make install_jsregexp",
+    requires = { "rafamadriz/friendly-snippets" },
+    config = plugconf.luasnip,
+  }
 
   -- Surround shorcuts for paranthesis etc
   use 'tpope/vim-surround'
@@ -61,7 +68,7 @@ return require('packer').startup(function(use)
       'hrsh7th/cmp-buffer',
       'hrsh7th/cmp-path',
       'hrsh7th/cmp-cmdline',
-      'quangnguyen30192/cmp-nvim-ultisnips',
+      'saadparwaiz1/cmp_luasnip',
     },
     config = plugconf.cmp,
   }

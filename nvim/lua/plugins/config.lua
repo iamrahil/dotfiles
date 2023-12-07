@@ -98,8 +98,7 @@ function config.cmp()
   cmp.setup({
     snippet = {
       expand = function(args)
-        -- vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-        vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
+        require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
       end,
     },
     mapping = cmp.mapping.preset.insert({
@@ -115,8 +114,7 @@ function config.cmp()
     },
     sources = cmp.config.sources({
         { name = 'nvim_lsp' },
-        --{ name = 'vsnip' }, -- For vsnip users.
-        { name = 'ultisnips' }, -- For ultisnips users.
+        { name = 'luasnip' },
       }, {
         { name = 'buffer' },
       })
@@ -217,6 +215,11 @@ end
 
 function config.octo()
   require'octo'.setup{}
+end
+
+function config.luasnip()
+  require("luasnip.loaders.from_vscode").lazy_load()
+  require'luasnip'.filetype_extend("ruby", {"rails"})
 end
 
 return config
