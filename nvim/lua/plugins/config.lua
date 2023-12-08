@@ -188,7 +188,7 @@ function config.tabby()
     tabline = util.extract_nvim_hl('lualine_c_normal'),
     tabline_sel = util.extract_nvim_hl('lualine_a_normal'),
   }
-  require('tabby.tabline').use_preset('active_wins_at_tail', {
+  require('tabby.tabline').use_preset('tab_only', {
     theme = {
       fill = ltheme.fill, -- tabline background
       head = ltheme.tabline, -- head element highlight
