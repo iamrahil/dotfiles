@@ -4,7 +4,7 @@ return {
   {
     'markstory/vim-zoomwin',
     cmd = 'ZoomToggle',
-    keys = { {'n', '<leader>z'} }
+    keys = { '<leader>z' }
   },
 
   -- OSC52 support. (Clipboard from terminal escape codes)
@@ -40,7 +40,7 @@ return {
   {
     'tversteeg/registers.nvim',
     branch = 'main',
-    keys = { { 'n', '"' }, { 'i', '<c-r>' } },
+    keys = { { '"', mode = 'n' }, { '<c-r>', mode = 'i' } },
     cmd = {'Registers'},
     config = function()
       require("registers").setup()
