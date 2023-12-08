@@ -9,5 +9,4 @@ mkdir -p "$HOME"/.config
 ln -s "$DIR" "$HOME"/.config/nvim
 
 # Init vim
-nvim -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
-nvim -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+nvim --headless "+Lazy! sync" +qa

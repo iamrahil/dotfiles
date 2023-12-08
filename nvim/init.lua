@@ -5,7 +5,21 @@ local opt = vim.opt  -- to set optionslocal cmd = vim.cmd
 
 local HOME = os.getenv('HOME')
 
-require('plugins')
+pcall(function() require('custom.variables') end)
+
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+require("lazy").setup("plugins")
 
 opt.number = true         -- Show line numbers
 opt.relativenumber = true -- Relative line numbers
