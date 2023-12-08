@@ -1,7 +1,4 @@
 return {
-  -- Elixir integration
-  'slashmili/alchemist.vim',
-
   -- Use local npm for eslint
   {
     'benjie/local-npm-bin.vim',
