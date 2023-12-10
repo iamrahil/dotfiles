@@ -41,6 +41,7 @@ function conf.keymaps(client, bufnr)
   buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
   --buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
 
+  vim.cmd.ALEDisableBuffer()
   require('aerial').setup({
       -- use on_attach to set keymaps when aerial has attached to a buffer
       on_attach = function(bufnr)
