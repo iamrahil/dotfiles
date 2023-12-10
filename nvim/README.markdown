@@ -117,6 +117,7 @@ For more info refer [this file](lua/configs/lsp.lua)
 * gi : Jump to implementation
 * gr : Jump to/List all references in quickfix window
 * Leader-f : Format the current buffer for lint
+* Leader-fs : Format only selected lines of buffer
 * [d : Jump to prev code issue
 * ]d : Jump to next code issue
 * gpd : Preview definition
