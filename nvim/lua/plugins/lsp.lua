@@ -9,6 +9,7 @@ return {
       local nvim_lsp = require('lspconfig')
       local lspconf = require('configs.lsp')
       local servers = vim.g["custom#lspservers"]
+      if servers == nil then servers = {} end
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
       for _, lsp in ipairs(servers) do
         nvim_lsp[lsp].setup {
