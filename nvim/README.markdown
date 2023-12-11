@@ -65,9 +65,9 @@ More Advanced Options follow
 ### Search
 > Filters can be added by Control-6 on the popup menu
 
-* Leader-gf : Find files in workspace
-* Leader-gg : grep string under cursor
-* Leader-gl : live grep in workspace
+* Leader-lf : Find files in workspace
+* Leader-lg : grep string under cursor
+* Leader-ll : live grep in workspace
 
 
 ### Comments

@@ -64,9 +64,9 @@ nmap('<c-L>', '<cmd>Telescope<CR>', norem)
 nmap('<c-;>', '<cmd>Telescope commands<CR>', norem)
 
 -- Search
-nmap('<leader>gf', '<cmd>Telescope menufacture find_files<CR>', norem)
-nmap('<leader>gg', '<cmd>Telescope menufacture grep_string<CR>', norem)
-nmap('<leader>gl', '<cmd>Telescope menufacture live_grep<CR>', norem)
+nmap('<leader>lf', '<cmd>Telescope menufacture find_files<CR>', norem)
+nmap('<leader>lg', '<cmd>Telescope menufacture grep_string<CR>', norem)
+nmap('<leader>ll', '<cmd>Telescope menufacture live_grep<CR>', norem)
 
 -- Terminal Shortcuts
 nmap('<leader>tt', ':tabnew | term<CR>', norem)
@@ -86,3 +86,6 @@ nmap('<leader>cfl', ':let @+=expand("%").":".line(".")<CR>', norem)
 -- Copy filename:linenumber:column to system clipbaord
 nmap('<leader>cfc', ':let @+=expand("%").":".line(".").":".col(".")<CR>', norem)
 nmap('<leader>cfn', '<cmd>echo <leader>cfc instead<CR>', norem) -- deprecated; to be removed
+
+-- Git commands
+nmap('<leader>gb', '<cmd>Git blame<CR>', norem)
