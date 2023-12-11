@@ -2,12 +2,12 @@ return {
   -- Use local npm for eslint
   {
     'benjie/local-npm-bin.vim',
-    ft = {'javascript'}
+    ft = { 'javascript', 'typescript' }
   },
 
   -- Scala integration
   {
     'scalameta/nvim-metals',
-    after = 'goto-preview',
+    dependencies = { 'goto-preview' },
   }
 }

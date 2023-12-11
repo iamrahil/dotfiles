@@ -32,9 +32,7 @@ return {
     ft = {'markdown'},
     lazy = true,
     cmd = 'Glow',
-    config = function()
-      require('glow').setup()
-    end
+    config = true
   },
   -- Vim registers manager
   {
@@ -42,9 +40,7 @@ return {
     branch = 'main',
     keys = { { '"', mode = 'n' }, { '<c-r>', mode = 'i' } },
     cmd = {'Registers'},
-    config = function()
-      require("registers").setup()
-    end
+    config = true
   },
   -- Cheatsheet for common commands
   {
@@ -56,7 +52,11 @@ return {
     }
   },
   -- Scratch buffer for lua
-  'rafcamlet/nvim-luapad',
+  {
+    'rafcamlet/nvim-luapad',
+    lazy = true,
+    cmd = { 'Luapad' }
+  },
 
   -- Window chooser for switching
   't9md/vim-choosewin',

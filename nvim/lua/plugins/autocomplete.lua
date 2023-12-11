@@ -91,9 +91,7 @@ return {
   -- Autoclose paranthesis
   {
     'windwp/nvim-autopairs',
-    config = function()
-      require("nvim-autopairs").setup {}
-    end
+    config = true
   },
   -- Comment lines
   'scrooloose/nerdcommenter'
