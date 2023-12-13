@@ -1,5 +1,4 @@
 set completeopt=menu,menuone,noselect
-map <Esc>[B <Down>]
 
 " highlight yanked text for some duration
 au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=250}

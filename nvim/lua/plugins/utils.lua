@@ -73,8 +73,13 @@ return {
 
   -- Wrapper for running tests from nvim
   {
-    'vim-test/vim-test',
+    'klen/nvim-test',
     lazy = true,
-    cmd = {'TestFile', 'TestLast', 'TestNearest', 'TestSuite', 'TestVisit'}
+    cmd = {'TestFile', 'TestLast', 'TestNearest', 'TestSuite', 'TestVisit', 'TestInfo'},
+    opts = {
+      termOpts = {
+        direction = "float"
+      }
+    }
   },
 }
