@@ -74,10 +74,26 @@ nmap('<leader>tv', ':vsplit | term<CR>', norem)
 nmap('<leader>tx', ':split | term<CR>', norem)
 
 -- Vim-Test Shortcuts
-nmap('<leader>ss', ':TestLast<CR>', norem)
-nmap('<leader>sn', ':TestNearest<CR>', norem)
-nmap('<leader>sf', ':TestFile<CR>', norem)
-nmap('<leader>sg', ':TestVisit<CR>', norem)
+vim.keymap.set('n', '<leader>sn', function()
+  local neotest = require('neotest')
+  neotest.run.run()
+  neotest.summary.open()
+end, norem)
+
+vim.keymap.set('n', '<leader>ss', function()
+  local neotest = require('neotest')
+  neotest.run.run_last()
+end, norem)
+
+vim.keymap.set('n', '<leader>sf', function()
+  local neotest = require('neotest')
+  neotest.run.run(vim.fn.expand("%"))
+  neotest.summary.open()
+end, norem)
+
+vim.keymap.set('n', '<leader>sg', function()
+  require('neotest').summary.toggle()
+end, norem)
 
 -- Copy filename to system clipboard
 nmap('<leader>cff', ':let @+=expand("%")<CR>', norem)

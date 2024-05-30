@@ -135,7 +135,7 @@ For more info refer [this file](lua/configs/lsp.lua)
 * Leader-ss : Run last test again
 * Leader-sn : Run Nearest tets in file
 * Leader-sf : Run tests of the entire file
-* Leader-sg : Goto the last run test file
+* Leader-sg : Toggle test summary window
 
 ### Useful Unimpaired Shortcuts
 

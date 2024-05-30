@@ -73,13 +73,20 @@ return {
 
   -- Wrapper for running tests from nvim
   {
-    'klen/nvim-test',
-    lazy = true,
-    cmd = {'TestFile', 'TestLast', 'TestNearest', 'TestSuite', 'TestVisit', 'TestInfo'},
-    opts = {
-      termOpts = {
-        direction = "float"
-      }
-    }
-  },
+    "nvim-neotest/neotest",
+    dependencies = {
+      "nvim-neotest/nvim-nio",
+      "nvim-lua/plenary.nvim",
+      "antoinemadec/FixCursorHold.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "olimorris/neotest-rspec",
+    },
+    config = function()
+      require("neotest").setup({
+        adapters = {
+          require("neotest-rspec"),
+        }
+      })
+    end
+  }
 }
