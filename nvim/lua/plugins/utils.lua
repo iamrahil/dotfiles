@@ -71,6 +71,12 @@ return {
     cmd = {'TagbarToggle', 'TagbarOpen'}
   },
 
+  {
+    'ruifm/gitlinker.nvim',
+    dependencies = {'nvim-lua/plenary.nvim'},
+    config = true
+  },
+
   -- Wrapper for running tests from nvim
   {
     "nvim-neotest/neotest",

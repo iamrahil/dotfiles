@@ -106,6 +106,7 @@ b1,b2: surrounding types. eg. ' " [] () {}
 ### Clipboard
 * " : in Normal/Visual mode, open the clipboard registers
 * Control-R : in Insert mode, open the clipboard registers
+* Leader-gy : Copy github/lab link for the line/block to clipboard
 
 ### LSP specific keybindings
 
