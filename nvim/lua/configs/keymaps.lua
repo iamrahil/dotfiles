@@ -77,7 +77,11 @@ nmap('<leader>tx', ':split | term<CR>', norem)
 vim.keymap.set('n', '<leader>sn', function()
   local neotest = require('neotest')
   neotest.run.run()
-  neotest.summary.open()
+end, norem)
+
+vim.keymap.set('n', '<leader>sa', function()
+  local neotest = require('neotest')
+  neotest.run.attach()
 end, norem)
 
 vim.keymap.set('n', '<leader>ss', function()

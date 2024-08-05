@@ -87,6 +87,8 @@ return {
       "nvim-treesitter/nvim-treesitter",
       "olimorris/neotest-rspec",
     },
+    lazy = true,
+    ft = { 'ruby' },
     config = function()
       require("neotest").setup({
         adapters = {
