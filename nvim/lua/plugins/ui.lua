@@ -12,12 +12,6 @@ return {
     config = function()
       require('lualine').setup {
         extensions = {'nvim-tree', 'quickfix', 'aerial'},
-        winbar = {
-          lualine_c = {'filename'},
-        },
-        inactive_winbar = {
-          lualine_c = {'filename'},
-        }
       }
     end
   },
@@ -52,5 +46,21 @@ return {
         default_delay = 2
       })
     end
+  },
+
+  -- Breadcrumbs LSP path in winbar
+  {
+    "utilyre/barbecue.nvim",
+    name = "barbecue",
+    version = "*",
+    dependencies = {
+      "SmiteshP/nvim-navic",
+      "neovim/nvim-lspconfig",
+      "nvim-tree/nvim-web-devicons", -- optional dependency
+    },
+    opts = {
+      show_basename = false,
+      show_dirname = false
+    }
   }
 }
