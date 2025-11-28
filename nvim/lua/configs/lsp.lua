@@ -1,4 +1,3 @@
-local nvim_lsp = require('lspconfig')
 local conf = {}
 
 function conf.keymaps(client, bufnr)

@@ -50,5 +50,5 @@ return {
       show_basename = false,
       show_dirname = false
     }
-  }
+  },
 }

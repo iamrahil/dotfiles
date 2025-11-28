@@ -6,19 +6,12 @@ return {
     config = function()
       -- Use a loop to conveniently call 'setup' on multiple servers and
       -- map buffer local keybindings when the language server attaches
-      local nvim_lsp = require('lspconfig')
       local lspconf = require('configs.lsp')
       local servers = vim.g["custom#lspservers"]
       if servers == nil then servers = {} end
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
       for _, lsp in ipairs(servers) do
-        nvim_lsp[lsp].setup {
-          capabilities = capabilities,
-          on_attach = lspconf.loadlspconfig,
-          flags = {
-            debounce_text_changes = 150,
-          }
-        }
+        vim.lsp.enable(lsp)
       end
     end
   },
